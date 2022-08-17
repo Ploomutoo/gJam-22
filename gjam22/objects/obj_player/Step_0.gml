@@ -9,13 +9,29 @@ if(keyboard_check_pressed(vk_space) && z <= 0)
 	dspeed = 5;
 }
 #endregion
-
-#region minions
-//update sorting
-/**array_sort(minion_arr, function(_elm1, _elm2)
-{
-    return (_elm1.state == st.carry) - (_elm2.state == st.carry);
-}); */
-#endregion
-
 event_inherited();
+
+var minStart = minionOn;
+if(mouse_wheel_down()) {
+	minionOn++;
+	if(minionOn>=minion_slots) minionOn = 0;
+	
+	while(minion_arr[minionOn].state!=st.carry){
+		minionOn++;
+		if(minionOn>=minion_slots) minionOn = 0;
+		
+		if(minionOn = minStart) break;
+	}
+}
+if(mouse_wheel_up()) {
+	minionOn--;
+	if(minionOn<0) minionOn = array_length(minion_arr)-1;
+	
+	while(minion_arr[minionOn].state!=st.carry){
+		minionOn--;
+		if(minionOn<0) minionOn = array_length(minion_arr)-1;
+		
+		if(minionOn = minStart) break;
+	}
+}
+

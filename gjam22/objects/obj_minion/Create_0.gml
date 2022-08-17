@@ -3,9 +3,10 @@ event_inherited();
 //ai
 owner = noone;
 target_obj = noone;
-target_x = 0;
-target_y = 0;
 state = st.carry;
+
+moveSpeed = 3
+minionIndex = 0;
 
 enum st
 {

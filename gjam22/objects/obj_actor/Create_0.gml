@@ -3,6 +3,7 @@ event_inherited();
 //inputs
 inp_move = false;
 inp_dir = 0;
+inp_aim = 0;
 
 //movement
 dspeed = 0;

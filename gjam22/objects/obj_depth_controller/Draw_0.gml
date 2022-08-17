@@ -22,7 +22,7 @@ for(var i = 0; i < array_length(inst_arr); i++)
 	{
 		var shadow_xscale = (bbox_right-bbox_left)/sprite_get_width(spr_shadow);
 		var shadow_yscale = (bbox_bottom-bbox_top)/sprite_get_height(spr_shadow);
-		draw_sprite_ext(spr_shadow, 0, round(x), round(y), shadow_xscale, shadow_yscale, 0, c_white, 0.5);
+		draw_sprite_ext(spr_shadow, 0, round(x), round(y), shadow_xscale, shadow_yscale, 0, c_black, 0.5);
 	}
 }
 
@@ -41,3 +41,4 @@ for(var i = 0; i < array_length(inst_arr); i++)
 		y = old_y;
 	}
 }
+

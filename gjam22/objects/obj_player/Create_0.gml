@@ -2,13 +2,19 @@ event_inherited();
 
 //stats
 minion_slots = 3;
-//minion_arr = [];
+radius = 45;
+
+minion_arr = [];
+minionOn = 0;
 
 //spawning minions
 repeat(minion_slots)
 {
-	var inst = instance_create_layer(x, y, layer, obj_minion);
-	
+	var inst = createAt(obj_minion);
 	inst.owner = id;
-	//array_push(minion_arr, inst);
+	inst.minionIndex = array_length(minion_arr);
+	
+	array_push(minion_arr, inst);
 }
+
+createAt(obj_ui);
