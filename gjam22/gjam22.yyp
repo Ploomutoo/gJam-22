@@ -1,6 +1,15 @@
 {
   "resources": [
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"obj_minion","path":"objects/obj_minion/obj_minion.yy",},"order":2,},
+    {"id":{"name":"approach","path":"scripts/approach/approach.yy",},"order":0,},
+    {"id":{"name":"spr_shadow","path":"sprites/spr_shadow/spr_shadow.yy",},"order":2,},
+    {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":1,},
+    {"id":{"name":"obj_depth_sort","path":"objects/obj_depth_sort/obj_depth_sort.yy",},"order":1,},
+    {"id":{"name":"spr_minion","path":"sprites/spr_minion/spr_minion.yy",},"order":0,},
+    {"id":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"order":0,},
+    {"id":{"name":"obj_depth_controller","path":"objects/obj_depth_controller/obj_depth_controller.yy",},"order":0,},
+    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":3,},
+    {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},
@@ -9,14 +18,14 @@
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
   ],
-  "defaultScriptType": 0,
+  "defaultScriptType": 1,
   "isEcma": false,
   "configs": {
     "name": "Default",
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -33,6 +42,9 @@
     {"folderPath":"folders/Animation Curves.yy","order":12,"resourceVersion":"1.0","name":"Animation Curves","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Notes.yy","order":13,"resourceVersion":"1.0","name":"Notes","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Extensions.yy","order":14,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/game_objects.yy","order":5,"resourceVersion":"1.0","name":"game_objects","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/game_objects/actors.yy","order":0,"resourceVersion":"1.0","name":"actors","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/controllers.yy","order":6,"resourceVersion":"1.0","name":"controllers","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
