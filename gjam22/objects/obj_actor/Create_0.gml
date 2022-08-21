@@ -4,6 +4,8 @@ event_inherited();
 inp_move = false;
 inp_dir = 0;
 inp_aim = 0;
+inp_prim = false;
+inp_sec = false;
 
 //movement
 dspeed = 0;
@@ -16,4 +18,3 @@ air_drag = 0.1;
 max_hp = 5;
 hp = max_hp;
 move_force = 1;
-air_move_force = move_force * (air_drag / drag);

@@ -24,6 +24,7 @@ else
 var move_final = move_force;
 if(z > 0)
 {
+	var air_move_force = move_force * (air_drag / drag);
 	move_final = air_move_force;
 }
 hspeed += lengthdir_x(move_final, inp_dir)*inp_move;

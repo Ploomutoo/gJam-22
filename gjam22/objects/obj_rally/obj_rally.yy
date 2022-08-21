@@ -4,7 +4,7 @@
     "path": "sprites/spr_defend/spr_defend.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {

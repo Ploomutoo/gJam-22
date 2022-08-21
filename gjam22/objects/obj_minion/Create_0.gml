@@ -3,15 +3,23 @@ event_inherited();
 //ai
 owner = noone;
 target_obj = noone;
+target_x = x;
+target_y = y;
+target_buffer = 5;
 state = st.carry;
 
-moveSpeed = 3
-minionIndex = 0;
+wiggle_amt = 45;
+wiggle_speed = 0.05;
+wiggle_timer = 0;
+
+//stats
+
 
 enum st
 {
 	carry,
 	idle,
+	move,
 	fetch,
 	attack,
 	recall

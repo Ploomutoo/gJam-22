@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "generation",
+    "path": "folders/Scripts/generation.yy",
   },
   "resourceVersion": "1.0",
-  "name": "functions",
+  "name": "scr_noise",
   "tags": [],
   "resourceType": "GMScript",
 }
