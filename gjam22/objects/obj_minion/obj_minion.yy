@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_minion",
-    "path": "sprites/spr_minion/spr_minion.yy",
+    "name": "spr_minionSpine",
+    "path": "sprites/spr_minionSpine/spr_minionSpine.yy",
   },
   "solid": false,
   "visible": false,
