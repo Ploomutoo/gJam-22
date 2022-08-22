@@ -1,1 +1,1 @@
-draw_self();
+if(!hide) draw_self();

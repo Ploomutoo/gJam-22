@@ -8,7 +8,7 @@ with(obj_player) {
 		var col = c_white;
 		if(minion_arr[i].state != st.carry) col = c_grey;
 		
-		draw_sprite_ext(minion_arr[i].sprite_index,0,16+32*i,32,1,1,0,col,1)
+		draw_sprite_ext(spr_minion,0,16+32*i,32,1,1,0,col,1)
 		i--
 	}
 }

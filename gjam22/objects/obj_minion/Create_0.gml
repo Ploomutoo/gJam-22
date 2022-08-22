@@ -14,16 +14,20 @@ wiggle_timer = 0;
 
 skeleton_animation_set("walks");
 skeleton_skin_set("normal");
+animDir = 0;
+item_carry = noone;
 
 //stats
-
+combat_interval = room_speed;
+combat_counter = combat_interval;
+combat_damage = 1;
 
 enum st
 {
 	carry,
 	idle,
 	move,
-	fetch,
-	attack,
+	combat,
+	go,
 	recall
 }

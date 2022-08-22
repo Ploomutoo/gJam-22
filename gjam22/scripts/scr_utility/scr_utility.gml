@@ -1,3 +1,9 @@
+function soundRand(argument0) {
+	audio_stop_sound(argument0)
+	audio_sound_pitch(argument0,1+random_range(-0.2,0.2))
+	audio_play_sound(argument0,0,0)
+}
+
 function approach(_start, _end, _shift)
 {
 	if (_start < _end)
