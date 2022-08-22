@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "y5l9UpSylTw", "spine": "4.1.08", "x": -21.5, "y": -17.68, "width": 57.67, "height": 68.29 },
+"skeleton": { "hash": "EIIYauKG7no", "spine": "4.1.08", "x": -26, "y": -11.57, "width": 53.94, "height": 62.81 },
 "bones": [
 	{ "name": "root" },
 	{ "name": "body", "parent": "root" },
@@ -18,13 +18,13 @@
 		"length": 12.8,
 		"rotation": 89.12,
 		"x": -0.98,
-		"y": 24.68,
+		"y": 23.32,
 		"transform": "noScale"
 	}
 ],
 "slots": [
 	{ "name": "body", "bone": "body", "attachment": "bodw" },
-	{ "name": "head", "bone": "head", "attachment": "heads" },
+	{ "name": "head", "bone": "head", "attachment": "headw" },
 	{ "name": "weapon", "bone": "weapon", "attachment": "weapon" }
 ],
 "skins": [
@@ -32,9 +32,9 @@
 		"name": "bonehead",
 		"attachments": {
 			"body": {
-				"bods": { "name": "bonehead4", "y": 12.94, "width": 59, "height": 48 },
-				"bodw": { "name": "norm2", "y": 10.43, "width": 43, "height": 46 },
-				"bodn": { "name": "norm3", "y": 10.43, "width": 46, "height": 45 }
+				"bods": { "name": "bonehead4", "y": 12.94, "width": 55, "height": 45 },
+				"bodw": { "name": "bonehead5", "y": 10.43, "width": 52, "height": 44 },
+				"bodn": { "name": "bonehead6", "y": 10.43, "width": 59, "height": 46 }
 			},
 			"head": {
 				"heads": { "name": "bonehead1", "x": 8.43, "y": 0.13, "rotation": -89.12, "width": 46, "height": 36 },
@@ -42,7 +42,60 @@
 				"headn": { "name": "bonehead3", "x": 8.43, "y": 0.13, "rotation": -89.12, "width": 46, "height": 35 }
 			},
 			"weapon": {
-				"weapon": { "name": "empty", "width": 16, "height": 16 }
+				"weapon": { "name": "bonehead7", "x": 9.64, "y": 1.24, "rotation": -75.5, "width": 21, "height": 32 }
+			}
+		}
+	},
+	{
+		"name": "bun",
+		"attachments": {
+			"body": {
+				"bods": { "name": "bun/bun1", "y": 10.43, "width": 48, "height": 50 },
+				"bodw": { "name": "bun/bun5", "y": 10.43, "width": 46, "height": 47 },
+				"bodn": { "name": "bun/bun6", "y": 10.43, "width": 44, "height": 48 }
+			},
+			"head": {
+				"heads": { "name": "bun/bun2", "x": 14.23, "y": -0.76, "rotation": -89.12, "width": 43, "height": 49 },
+				"headw": { "name": "bun/bun3", "x": 8.44, "y": -0.85, "rotation": -89.12, "width": 46, "height": 52 },
+				"headn": { "name": "bun/bun4", "x": 8.44, "y": -0.85, "rotation": -89.12, "width": 45, "height": 47 }
+			},
+			"weapon": {
+				"weapon": {
+					"name": "spear",
+					"path": "empty",
+					"x": 13.41,
+					"y": -2.47,
+					"rotation": -65.06,
+					"width": 16,
+					"height": 16
+				}
+			}
+		}
+	},
+	{
+		"name": "crusadile",
+		"attachments": {
+			"body": {
+				"bods": { "name": "crusadile/crusadile1", "x": 1.08, "y": 8.13, "width": 48, "height": 42 },
+				"bodw": { "name": "crusadile/crusadile6", "x": -3.65, "y": 10.18, "width": 46, "height": 41 },
+				"bodn": { "name": "crusadile/crusadile7", "y": 10.16, "rotation": 0.56, "width": 46, "height": 42 }
+			},
+			"head": {
+				"heads": { "name": "crusadile/crusadile2", "x": 4.94, "y": -0.57, "rotation": -89.12, "width": 34, "height": 43 },
+				"headw": {
+					"name": "crusadile/crusadile3",
+					"x": 10.35,
+					"y": -3.46,
+					"scaleX": 0.9242,
+					"scaleY": 0.9242,
+					"rotation": -96.56,
+					"width": 44,
+					"height": 34
+				},
+				"headn": { "name": "crusadile/crusadile4", "x": 10.05, "y": -1, "rotation": -89.12, "width": 31, "height": 35 }
+			},
+			"weapon": {
+				"weapon": { "name": "crusadile/crusadile5", "x": 16.4, "y": -3.56, "rotation": -92.29, "width": 24, "height": 52 }
 			}
 		}
 	},
@@ -78,6 +131,34 @@
 		}
 	},
 	{
+		"name": "orc",
+		"attachments": {
+			"body": {
+				"bods": { "name": "orc/orc1", "y": 10.2, "width": 60, "height": 47 },
+				"bodw": { "name": "orc/orc5", "x": 0.5, "y": 10.43, "width": 45, "height": 46 },
+				"bodn": { "name": "orc/orc6", "y": 10.82, "width": 54, "height": 44 }
+			},
+			"head": {
+				"heads": { "name": "orc/orc2", "x": 10.94, "y": -0.33, "rotation": -89.12, "width": 39, "height": 43 },
+				"headw": { "name": "orc/orc3", "x": 10.93, "y": -1, "rotation": -89.12, "width": 44, "height": 44 },
+				"headn": { "name": "orc/orc4", "x": 12.76, "y": 0.55, "rotation": -87.23, "width": 46, "height": 34 }
+			},
+			"weapon": {
+				"weapon": {
+					"name": "orc7",
+					"path": "orc/orc7",
+					"x": 12.52,
+					"y": -1.14,
+					"scaleX": -0.808,
+					"scaleY": 0.808,
+					"rotation": -63.05,
+					"width": 31,
+					"height": 38
+				}
+			}
+		}
+	},
+	{
 		"name": "spider",
 		"attachments": {
 			"body": {
@@ -93,24 +174,9 @@
 ],
 "animations": {
 	"walke": {
-		"slots": {
-			"body": {
-				"attachment": [
-					{ "name": "bodw" },
-					{ "time": 0.1, "name": "bodw" }
-				]
-			},
-			"head": {
-				"attachment": [
-					{ "name": "headw" },
-					{ "time": 0.1, "name": "headw" }
-				]
-			}
-		},
 		"bones": {
 			"head": {
 				"translate": [
-					{ "curve": "stepped" },
 					{ "time": 0.0333 },
 					{ "time": 0.1, "x": -0.08, "y": -2.3 },
 					{ "time": 0.1333 }
@@ -136,7 +202,6 @@
 					{ "time": 0.3333 }
 				],
 				"translate": [
-					{ "curve": "stepped" },
 					{
 						"time": 0.1,
 						"curve": [ 0.136, 0, 0.167, 0, 0.136, 1.53, 0.167, 4.18 ]
@@ -163,13 +228,13 @@
 			},
 			"weapon": {
 				"rotate": [
-					{ "value": -173.64 },
+					{ "value": 9.25 },
 					{
 						"time": 0.0667,
-						"value": -181.04,
-						"curve": [ 0.156, -181.04, 0.244, -173.64 ]
+						"value": 1.85,
+						"curve": [ 0.156, 1.85, 0.244, 9.25 ]
 					},
-					{ "time": 0.3333, "value": -173.64 }
+					{ "time": 0.3333, "value": 9.25 }
 				],
 				"translate": [
 					{ "x": 5.37, "y": 9.94 },
@@ -180,9 +245,6 @@
 						"curve": [ 0.111, 4.66, 0.156, 5.37, 0.111, 10.72, 0.156, 9.94 ]
 					},
 					{ "time": 0.2, "x": 5.37, "y": 9.94 }
-				],
-				"scale": [
-					{ "x": -1 }
 				]
 			}
 		},
@@ -210,7 +272,6 @@
 		"bones": {
 			"head": {
 				"translate": [
-					{ "curve": "stepped" },
 					{ "time": 0.0333 },
 					{ "time": 0.1, "x": -0.08, "y": -2.3 },
 					{ "time": 0.1333 }
@@ -252,8 +313,7 @@
 						"y": 10.77,
 						"curve": [ 0.167, -31.01, 0.2, -29.83, 0.167, 10.77, 0.2, 16.28 ]
 					},
-					{ "time": 0.2333, "x": -29.83, "y": 16.28, "curve": "stepped" },
-					{ "time": 0.3333, "x": -29.83, "y": 16.28 }
+					{ "time": 0.2333, "x": -29.83, "y": 16.28 }
 				],
 				"scale": [
 					{ "y": -1 }
@@ -268,7 +328,6 @@
 					{ "time": 0.3333 }
 				],
 				"translate": [
-					{ "curve": "stepped" },
 					{
 						"time": 0.1,
 						"curve": [ 0.136, 0, 0.167, 0, 0.136, 1.53, 0.167, 3.96 ]
@@ -308,15 +367,20 @@
 				"attachment": [
 					{ "name": "bods" }
 				]
+			},
+			"head": {
+				"attachment": [
+					{ "name": "heads" }
+				]
 			}
 		},
 		"bones": {
 			"head": {
 				"translate": [
-					{ "curve": "stepped" },
 					{ "time": 0.0333 },
 					{ "time": 0.1, "x": -0.08, "y": -2.3 },
-					{ "time": 0.1333 }
+					{ "time": 0.1333 },
+					{ "time": 0.2, "x": -0.35 }
 				],
 				"scale": [
 					{},
@@ -351,7 +415,6 @@
 					{ "time": 0.3333 }
 				],
 				"translate": [
-					{ "curve": "stepped" },
 					{
 						"time": 0.1,
 						"curve": [ 0.136, 0, 0.167, 0, 0.136, 1.53, 0.167, 4.18 ]
@@ -379,24 +442,9 @@
 		}
 	},
 	"walkw": {
-		"slots": {
-			"body": {
-				"attachment": [
-					{ "name": "bodw" },
-					{ "time": 0.1, "name": "bodw" }
-				]
-			},
-			"head": {
-				"attachment": [
-					{ "name": "headw" },
-					{ "time": 0.1, "name": "headw" }
-				]
-			}
-		},
 		"bones": {
 			"head": {
 				"translate": [
-					{ "curve": "stepped" },
 					{ "time": 0.0333 },
 					{ "time": 0.1, "x": -0.08, "y": -2.3 },
 					{ "time": 0.1333 }
@@ -421,7 +469,6 @@
 					{ "time": 0.3333 }
 				],
 				"translate": [
-					{ "curve": "stepped" },
 					{
 						"time": 0.1,
 						"curve": [ 0.136, 0, 0.167, 0, 0.136, 1.53, 0.167, 4.18 ]
