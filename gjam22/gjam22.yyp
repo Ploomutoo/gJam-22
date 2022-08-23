@@ -18,7 +18,7 @@
     {"id":{"name":"spr_bar_divider","path":"sprites/spr_bar_divider/spr_bar_divider.yy",},"order":10,},
     {"id":{"name":"spr_king","path":"sprites/spr_king/spr_king.yy",},"order":3,},
     {"id":{"name":"scr_utility","path":"scripts/scr_utility/scr_utility.yy",},"order":1,},
-    {"id":{"name":"scr_functions","path":"scripts/scr_functions/scr_functions.yy",},"order":1,},
+    {"id":{"name":"scr_minion","path":"scripts/scr_minion/scr_minion.yy",},"order":1,},
     {"id":{"name":"spr_dirt","path":"sprites/spr_dirt/spr_dirt.yy",},"order":4,},
     {"id":{"name":"obj_ui","path":"objects/obj_ui/obj_ui.yy",},"order":4,},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"order":0,},

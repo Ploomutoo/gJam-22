@@ -2,6 +2,7 @@ function createAt(object){
 	return(instance_create_layer(x,y,layer,object));
 }
 
+//calculate minion mount position
 function minion_mount_pos(minion_id)
 {
 	//check if owner exists

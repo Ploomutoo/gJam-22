@@ -6,7 +6,7 @@
     "path": "folders/Scripts/game.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_functions",
+  "name": "scr_minion",
   "tags": [],
   "resourceType": "GMScript",
 }
