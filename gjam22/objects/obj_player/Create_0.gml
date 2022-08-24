@@ -7,6 +7,7 @@ minion_radius = max(sprite_get_bbox_right(sprite_index)-sprite_get_bbox_left(spr
 minion_arr = [];
 busy_arr = [];
 minion_selected = 0;
+recall_radius = 128;
 
 max_move_force = 1;
 

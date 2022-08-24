@@ -22,8 +22,9 @@ move_force = max_move_force * array_length(minion_arr)/minion_slots;
 event_inherited();
 
 #region abilities
+
 //deploy
-if(inp_prim && minion_selected > -1)
+if(inp_prim && array_length(minion_arr) > 0)
 {	
 	barkRand(sndKing1,sndKing2,sndKing3);
 	var target = instance_nearest(mouse_x,mouse_y,obj_interactible);
@@ -48,7 +49,6 @@ if(inp_prim && minion_selected > -1)
 				
 				instance_deactivate_object(self);
 			}
-			//show_debug_message(object_get_name(target.object_index));
 		}
 		minion_arr[minion_selected].target_obj = target;
 		minion_arr[minion_selected].state = st.go;
@@ -57,27 +57,32 @@ if(inp_prim && minion_selected > -1)
 	
 	array_push(busy_arr,minion_arr[minion_selected]);
 	array_delete(minion_arr,minion_selected,1);
-	
-	if(minion_selected=array_length(minion_arr)) minion_selected = 0;
-	//minCycle(1);
 }
 //recall
 else if(inp_sec)
 {
-	var target = instance_nearest(mouse_x,mouse_y,obj_minion);
-	if(target = noone || point_distance(mouse_x,mouse_y,target.x,target.y) > 128) exit;
+	for(var i = 0; i < array_length(busy_arr); i++)
+	{
+		var target = busy_arr[i];
+		if(target = noone || point_distance(mouse_x,mouse_y,target.x,target.y) > recall_radius) continue;
 
-	if(target.state != st.carry && target.state != st.recall) with(target) {
+		if(target.state != st.carry && target.state != st.recall) with(target) {
 		
-		if(target_obj != noone && target_obj.object_index = obj_placeholder) {
+			if(target_obj != noone && target_obj.object_index = obj_placeholder) {
 			
-			instance_activate_object(target_obj.realObj);
-			instance_destroy(target_obj);
+				instance_activate_object(target_obj.realObj);
+				instance_destroy(target_obj);
+			}
+			recallFunc();
 		}
-		recallFunc();
 	}
 }
 #endregion
 
-if(mouse_wheel_down()) minCycle(-1);
-if(mouse_wheel_up()) minCycle(1);
+//scrolling
+minion_selected = clamp(minion_selected, 0, max(array_length(minion_arr)-1, 0));
+if(array_length(minion_arr) > 1)
+{
+	if(mouse_wheel_down()) minCycle(1);
+	if(mouse_wheel_up()) minCycle(-1);
+}
