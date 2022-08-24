@@ -16,16 +16,13 @@ function minCycle(add){
 		minion_selected-=add;
 		if(minion_selected<0) minion_selected = array_length(minion_arr)-1;
 		
-<<<<<<< HEAD
 		if(minion_selected = minStart) break;
 	}
-}*/
-=======
+
 		if(minion_selected = minStart) minion_selected = -1;
 	}*/
 
 }
->>>>>>> perci
 
 function minion_type_cycle(_add)
 {
