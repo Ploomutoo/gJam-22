@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndCoin.wav",
-  "duration": 0.226395,
+  "duration": 0.149796,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
