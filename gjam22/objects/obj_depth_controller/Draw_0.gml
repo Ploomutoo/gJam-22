@@ -18,7 +18,7 @@ array_sort(inst_arr, function(_elm1, _elm2)
 //drawing shadows
 for(var i = 0; i < array_length(inst_arr); i++)
 {
-	with(inst_arr[i])
+	with(inst_arr[i]) if(!hide) 
 	{
 		var shadow_xscale = (bbox_right-bbox_left)/sprite_get_width(spr_shadow);
 		var shadow_yscale = (bbox_bottom-bbox_top)/sprite_get_height(spr_shadow);

@@ -1,7 +1,21 @@
-function soundRand(argument0) {
-	audio_stop_sound(argument0)
-	audio_sound_pitch(argument0,1+random_range(-0.2,0.2))
-	audio_play_sound(argument0,0,0)
+function soundRand(play) {
+	
+	audio_stop_sound(play)
+	audio_sound_pitch(play,1+random_range(-0.2,0.2))
+	audio_play_sound(play,0,0)
+}
+
+function barkRand() {
+	
+	if(argument_count<1) exit;
+	if(argument_count=1) var play = argument[0];
+	else var play = argument[irandom(argument_count-1)];
+	
+	for(var i = argument_count-1; i>=0; i--) {
+		audio_stop_sound(argument[i])
+	}
+	//audio_sound_pitch(play,1+random_range(-0.2,0.2))
+	audio_play_sound(play,0,0)
 }
 
 function approach(_start, _end, _shift)

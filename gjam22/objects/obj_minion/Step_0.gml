@@ -14,14 +14,14 @@ switch state
 {
 	case st.carry://--------------------------
 	var mount_pos = minion_mount_pos(id);
-	x = mount_pos[0];
-	y = mount_pos[1];
+	x = lerp(x,mount_pos[0],0.2);
+	y = lerp(y,mount_pos[1],0.2);
 	
-	anim_to = "walks";
+	anim_to = "idle";
 	break;
 	
 	case st.idle://--------------------------
-	anim_to = "walks";
+	anim_to = "guard";
 	break;
 	
 	case st.move://--------------------------
@@ -43,60 +43,66 @@ switch state
 		if(point_distance(x, y, target_x, target_y) < target_buffer)
 		{	
 
-			if(target_obj.object_index=obj_pickup){
+			if(target_obj.object_index=obj_placeholder){
 				
-				state = st.recall;
+				recallFunc();
 				item_carry = target_obj;
 				item_carry.hide = true;
 			} else if(target_obj.object_index=obj_enemy){
 						
 				state = st.combat;
-				combat_counter = 1;
+				image_speed = combat_speed;
 			}
 			
 		}
 	}
-	else state = st.recall;	
+	else recallFunc();	
 	break;
 	
 	case st.combat://--------------------------
 	
 	if(!instance_exists(target_obj)) {
 		
-		state = st.recall;
+		recallFunc();
+		image_xscale = 1;
+		image_speed = 1;
 		target_obj = noone;
 		break;
 	}
 	
-	combat_counter--;
-	if(combat_counter=0){
-		
-		combat_counter = combat_interval;
-		target_obj.hp -= combat_damage;
-		soundRand(sndCombat);
-		with(target_obj) event_user(0);
-	}
+	anim_to = "attackw";
+	if(target_obj.x > x) image_xscale = -1;
+	else image_xscale = 1;
+	
 	break;
 	
 	case st.recall://--------------------------
 	inp_move = true;
-	var mount_pos = minion_mount_pos(id);
+	//var mount_pos = minion_mount_pos(id);
+	var mount_pos = [owner.x, owner.y];
+	
 	inp_dir = point_direction(x, y, mount_pos[0], mount_pos[1]);
 	
-	if(item_carry!=noone){
-		item_carry.x = x;
-		item_carry.y = y+1;		
-	}
-	
-	if(point_distance(x, y, mount_pos[0], mount_pos[1]) < target_buffer)
-	{
+	if(point_distance(x, y, mount_pos[0], mount_pos[1]) < owner.minion_radius)
+	{ //Exit to Carry
 		state = st.carry;
 		with(item_carry) {
 			
-			event_user(0);
+			with(realObj) {
+				
+				event_user(0);
+				instance_destroy();
+			}
 			instance_destroy();
 		}
 		item_carry = noone;
+		
+		with(obj_player) {
+		
+			array_delete(busy_arr,array_find_index(busy_arr,other.id),1);
+			array_push(minion_arr,other.id);
+			array_sort(minion_arr,minion_sort);
+		}
 	}
 	break;
 }

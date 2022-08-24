@@ -14,32 +14,18 @@ if(keyboard_check_pressed(vk_space) && z <= 0)
 #endregion
 
 #region setting carry speed
-var carry_minions = 0;
-for(var i = 0; i < array_length(minion_arr); i++)
-{
-	if(minion_arr[i].state = st.carry)
-	{
-		carry_minions += 1;
-	}
-}
-move_force = max_move_force * carry_minions/array_length(minion_arr);
+
+move_force = max_move_force * array_length(minion_arr)/minion_slots;
+//z = max(z,move_force*4)
 #endregion
 
 event_inherited();
 
-//sorting minion array
-array_sort(minion_arr, function(_elm1, _elm2)
-{
-	var sort_type = _elm1.object_index-_elm2.object_index;
-	var sort_deployed = (_elm1.state != st.carry) -  (_elm2.state != st.carry);
-	var sort_id = _elm1.id-_elm2.id;
-    return sort_type*100 + sort_deployed*10 + sort_id;
-});
-
 #region abilities
 //deploy
-if(inp_prim)
-{
+if(inp_prim && minion_selected > -1)
+{	
+	barkRand(sndKing1,sndKing2,sndKing3);
 	var target = instance_nearest(mouse_x,mouse_y,obj_interactible);
 	if(target = noone || point_distance(mouse_x,mouse_y,target.x,target.y) > 128)
 	{
@@ -50,12 +36,30 @@ if(inp_prim)
 	}
 	else
 	{
+		if(target.object_index = obj_pickup || object_is_ancestor(target.object_index,obj_pickup)) {
+			
+			with(target) {
+				
+				var placeholder = createAt(obj_placeholder);
+				placeholder.sprite_index = sprite_index;
+				placeholder.realObj = self;
+				
+				target = placeholder;
+				
+				instance_deactivate_object(self);
+			}
+			//show_debug_message(object_get_name(target.object_index));
+		}
 		minion_arr[minion_selected].target_obj = target;
 		minion_arr[minion_selected].state = st.go;
 
 	}
-	minCycle(1);
 	
+	array_push(busy_arr,minion_arr[minion_selected]);
+	array_delete(minion_arr,minion_selected,1);
+	
+	if(minion_selected=array_length(minion_arr)) minion_selected = 0;
+	//minCycle(1);
 }
 //recall
 else if(inp_sec)
@@ -63,9 +67,17 @@ else if(inp_sec)
 	var target = instance_nearest(mouse_x,mouse_y,obj_minion);
 	if(target = noone || point_distance(mouse_x,mouse_y,target.x,target.y) > 128) exit;
 
-	if(target.state != st.carry) target.state = st.recall;
+	if(target.state != st.carry) with(target) {
+		
+		if(target_obj != noone && target_obj.object_index = obj_placeholder) {
+			
+			instance_activate_object(target_obj.realObj);
+			instance_destroy(target_obj);
+		}
+		recallFunc();
+	}
 }
 #endregion
 
-if(mouse_wheel_down()) minCycle(1);
-if(mouse_wheel_up()) minCycle(-1);
+if(mouse_wheel_down()) minCycle(-1);
+if(mouse_wheel_up()) minCycle(1);

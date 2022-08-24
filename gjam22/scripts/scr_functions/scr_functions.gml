@@ -20,8 +20,9 @@ function minion_mount_pos(minion_id)
 	var angle = minion_num * 360 / array_length(minion_id.owner.minion_arr) + minion_id.owner.inp_aim;
 	
 	var pos = [];
-	pos[0] = minion_id.owner.x + lengthdir_x(minion_id.owner.minion_radius, angle);
-	pos[1] = minion_id.owner.y + lengthdir_y(minion_id.owner.minion_radius, angle);
+	var sqBound = owner.minion_radius
+	pos[0] = minion_id.owner.x + clamp(lengthdir_x(minion_id.owner.minion_radius*2, angle),-sqBound,sqBound);
+	pos[1] = minion_id.owner.y + clamp(lengthdir_y(minion_id.owner.minion_radius*2, angle),-sqBound,sqBound);
 	
 	return pos;
 }

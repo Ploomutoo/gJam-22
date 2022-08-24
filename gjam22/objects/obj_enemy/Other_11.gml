@@ -1,4 +1,5 @@
 /// @description Killed
+//if(!instance_exists(id)) exit;
 
 var ix = random(room_width);
 var iy = random(room_height);
