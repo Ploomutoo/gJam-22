@@ -14,7 +14,7 @@
 		
 		if(minion_selected = minStart) break;
 	}
-}
+}*/
 
 function minion_type_cycle(_add)
 {
