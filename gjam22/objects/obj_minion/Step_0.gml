@@ -13,97 +13,105 @@ if(instance_exists(target_obj))
 switch state
 {
 	case st.carry://--------------------------
-	var mount_pos = minion_mount_pos(id);
-	x = lerp(x,mount_pos[0],0.2);
-	y = lerp(y,mount_pos[1],0.2);
 	
-	anim_to = "idle";
+		anim_to = "idle";
+		var mount_pos = minion_mount_pos(id);
+		x = lerp(x,mount_pos[0],0.2);
+		y = lerp(y,mount_pos[1],0.2);
+		
 	break;
 	
 	case st.idle://--------------------------
-	anim_to = "guard";
+	
+		anim_to = "guard";
 	break;
 	
 	case st.move://--------------------------
-	inp_move = true;
-	inp_dir = point_direction(x,y,target_x,target_y);
+		
+		anim_to="";
+		inp_move = true;
+		inp_dir = point_direction(x,y,target_x,target_y);
 	
-	if(point_distance(x, y, target_x, target_y) < target_buffer)
-	{
-		state = st.idle;
-	}
+		if(point_distance(x, y, target_x, target_y) < target_buffer)
+		{
+			state = st.idle;
+		}
+		
 	break;
 	
 	case st.go://--------------------------
-	if(instance_exists(target_obj))
-	{
-		inp_move = true;
-		inp_dir = point_direction(x,y,target_x,target_y);
 		
-		if(point_distance(x, y, target_x, target_y) < target_buffer)
-		{	
-
-			if(target_obj.object_index=obj_placeholder){
+		anim_to="";
+		if(instance_exists(target_obj))
+		{
+			inp_move = true;
+			inp_dir = point_direction(x,y,target_x,target_y);
+		
+			if(point_distance(x, y, target_x, target_y) < target_buffer)
+			{	
+				if(target_obj.object_index=obj_placeholder){
 				
-				recallFunc();
-				item_carry = target_obj;
-				item_carry.hide = true;
-			} else if(target_obj.object_index=obj_enemy){
+					recallFunc();
+					item_carry = target_obj;
+					item_carry.hide = true;
+				} else if(target_obj.object_index=obj_enemy){
 						
-				state = st.combat;
-				image_speed = combat_speed;
-			}
+					state = st.combat;
+					image_speed = combat_speed;
+				}
 			
+			}
 		}
-	}
-	else recallFunc();	
+		else recallFunc();	
+		
 	break;
 	
 	case st.combat://--------------------------
 	
-	if(!instance_exists(target_obj)) {
+		if(!instance_exists(target_obj)) {
 		
-		recallFunc();
-		image_xscale = 1;
-		image_speed = 1;
-		target_obj = noone;
-		break;
-	}
+			recallFunc();
+			image_xscale = 1;
+			image_speed = 1;
+			target_obj = noone;
+			break;
+		}
 	
-	anim_to = "attackw";
-	if(target_obj.x > x) image_xscale = -1;
-	else image_xscale = 1;
+		anim_to = "attackw";
+		if(target_obj.x > x) image_xscale = -1;
+		else image_xscale = 1;
 	
 	break;
 	
 	case st.recall://--------------------------
-	inp_move = true;
-	//var mount_pos = minion_mount_pos(id);
-	var mount_pos = [owner.x, owner.y];
 	
-	inp_dir = point_direction(x, y, mount_pos[0], mount_pos[1]);
+		inp_move = true;
+		//var mount_pos = minion_mount_pos(id);
+		var mount_pos = [owner.x, owner.y];
 	
-	if(point_distance(x, y, mount_pos[0], mount_pos[1]) < owner.minion_radius)
-	{ //Exit to Carry
-		state = st.carry;
-		with(item_carry) {
+		inp_dir = point_direction(x, y, mount_pos[0], mount_pos[1]);
+	
+		if(point_distance(x, y, mount_pos[0], mount_pos[1]) < owner.minion_radius)
+		{ //Exit to Carry
+			state = st.carry;
+			with(item_carry) {
 			
-			with(realObj) {
+				with(realObj) {
 				
-				event_user(0);
+					event_user(0);
+					instance_destroy();
+				}
 				instance_destroy();
 			}
-			instance_destroy();
-		}
-		item_carry = noone;
+			item_carry = noone;
 		
-		with(obj_player) {
+			with(obj_player) {
 		
-			array_delete(busy_arr,array_find_index(busy_arr,other.id),1);
-			array_push(minion_arr,other.id);
-			array_sort(minion_arr,minion_sort);
+				array_delete(busy_arr,array_find_index(busy_arr,other.id),1);
+				array_push(minion_arr,other.id);
+				array_sort(minion_arr,minion_sort);
+			}
 		}
-	}
 	break;
 }
 #endregion
@@ -117,7 +125,7 @@ if(inp_move)
 }
 
 #region animation
-if(anim_to="") {
+if(anim_to = "") {
 
 	var ad = round(inp_dir/90);
 	if(animDir!=ad) {
@@ -137,6 +145,9 @@ if(anim_to="") {
 			break;
 			case 3:
 			skelSet("walks");
+			break;
+			default:
+			show_debug_message("error")
 			break;
 		}
 	}

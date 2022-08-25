@@ -26,14 +26,16 @@ event_inherited();
 //deploy
 if(inp_prim && array_length(minion_arr) > 0)
 {	
-	barkRand(sndKing1,sndKing2,sndKing3);
+	if(!audio_is_playing(bark)) bark = audio_play_sound(choose(sndKing1,sndKing3),0,0);
 	var target = instance_nearest(mouse_x,mouse_y,obj_interactible);
 	if(target = noone || point_distance(mouse_x,mouse_y,target.x,target.y) > 128)
-	{
-		minion_arr[minion_selected].target_obj = noone;
-		minion_arr[minion_selected].state = st.move;
-		minion_arr[minion_selected].target_x = mouse_x;
-		minion_arr[minion_selected].target_y = mouse_y;
+	{	
+		with(minion_arr[minion_selected]) {
+			target_obj = noone;
+			state = st.move;
+			target_x = mouse_x;
+			target_y = mouse_y;
+		}
 	}
 	else
 	{
@@ -55,12 +57,14 @@ if(inp_prim && array_length(minion_arr) > 0)
 
 	}
 	
+	minion_arr[minion_selected].animDir = -1;
 	array_push(busy_arr,minion_arr[minion_selected]);
 	array_delete(minion_arr,minion_selected,1);
 }
 //recall
 else if(inp_sec)
-{
+{	
+	if(!audio_is_playing(bark)) bark = audio_play_sound(sndKing2,0,0);
 	for(var i = 0; i < array_length(busy_arr); i++)
 	{
 		var target = busy_arr[i];

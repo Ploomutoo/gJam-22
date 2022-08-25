@@ -10,6 +10,7 @@ minion_selected = 0;
 recall_radius = 128;
 
 max_move_force = 1;
+bark = audio_play_sound(sndKing1,0,0);
 
 //sorting minion array
 function minion_sort (_elm1, _elm2)
