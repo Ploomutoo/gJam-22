@@ -1,7 +1,3 @@
-draw_set_color(c_black); draw_set_alpha(0.3);
-draw_rectangle(0,0,room_width,uiBottom,0);
-draw_set_color(c_white); draw_set_alpha(1);
-
 with(obj_player) {
 	
 	//Minion Array
@@ -9,29 +5,48 @@ with(obj_player) {
 	var i2 = array_length(minion_arr)-1;
 	var hOffset = 16;
 	
-	draw_sprite_ext(spr_ui_backing,0,hOffset,32,minion_slots,1,0,c_white,1);
-	draw_text(hOffset+36+32*i,22,string(floor(move_force*100))+"%");
+	draw_sprite_ext(spr_ui_backing,0,32,hOffset,1,minion_slots,0,c_white,1);
+	draw_text(16,hOffset+36+32*i,string(floor(move_force*100))+"%");
 	while(i>=0) {
 		
-		if(i>i2) draw_sprite(spr_minion,0,hOffset+16+32*i,32);
-		else if(i=minion_selected) draw_sprite(spr_minion_highlight,minion_arr[i].headSprite,hOffset+16+32*i,30);
+		if(i>i2) draw_sprite(spr_minion,0,32,hOffset+16+32*i);
+		else if(i=minion_selected) draw_sprite(spr_minion_highlight,minion_arr[i].headSprite,32,hOffset+16+32*i);
 		else
 		{
 			var col = c_white;
 			if(minion_arr[i].state != st.carry) col = c_grey;
 		
-			draw_sprite_ext(spr_minion,minion_arr[i].headSprite,hOffset+16+32*i,32,1,1,0,col,1);
+			draw_sprite_ext(spr_minion,minion_arr[i].headSprite,32,hOffset+16+32*i,1,1,0,col,1);
 		}
 		i--
 	}
 	
+	ix = 32;
+	i = oCamera.camHeight-32
+	draw_set_halign(fa_center);
+	draw_sprite(spr_item,0,ix,i-4);
+	draw_text(ix,i,string(food));
+	
+	i-=64
+	draw_sprite(spr_food,0,ix,i-4);
+	draw_text(ix,i,string(coins));
+	
 	//Busy Array
-	i = array_length(busy_arr)-1;
+	/*i = array_length(busy_arr)-1;
 	while(i>=0) {
 		
-		draw_sprite(spr_minion,busy_arr[i].headSprite,hOffset+16+32*i,64);
+		draw_sprite(spr_minion,busy_arr[i].headSprite,64,hOffset+16+32*i);
 		i--
-	}
+	}*/
+	var ix = 1344+32; //Width 64
+	hOffset=16
+	var barHeight = (oCamera.camHeight-hOffset*2)/32
+	show_debug_message(string(barHeight))
+	draw_sprite_ext(spr_ui_backing,0,ix,hOffset,0.5,barHeight,0,c_white,1);
+	
+	draw_sprite(spr_ui_crown,0,ix,hOffset+barHeight*32*progress);
+	if(oKillWall.progress>0) draw_sprite(spr_ui_crown,1,ix,hOffset+barHeight*32*oKillWall.progress);
+	
 }
 
 /*

@@ -8,6 +8,9 @@ if(instance_exists(obj_player)) {
 camWidth = 1280
 camHeight = 720;
 
+mouseLastX = mouse_x;
+mouseLastY = mouse_y;
+
 camera = camera_create();
 view_camera[0] = camera;
 

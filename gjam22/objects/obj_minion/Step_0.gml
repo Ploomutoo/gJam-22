@@ -54,8 +54,12 @@ switch state
 					recallFunc();
 					item_carry = target_obj;
 					item_carry.hide = true;
-				} else if(target_obj.object_index=obj_enemy){
-						
+				} else if(object_is_ancestor(target_obj.object_index,obj_enemy)){
+					
+					array_push(target_obj.engaged,id)
+					target_obj.inp_move = false;
+					
+					combat_disable = false;
 					state = st.combat;
 					image_speed = combat_speed;
 				}
@@ -69,7 +73,7 @@ switch state
 	case st.combat://--------------------------
 	
 		if(!instance_exists(target_obj)) {
-		
+			
 			recallFunc();
 			image_xscale = 1;
 			image_speed = 1;

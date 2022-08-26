@@ -1,20 +1,27 @@
 var lookX;
 var lookY;
+var camRad = camWidth/2;
 
 if(lookAt!=noone) {
 	lookX = lookAt.x
 	lookY = lookAt.y+yOffset
 	if(camFocus){
-		lookX += (mouse_x-lookX)/8;
-		lookY += (mouse_y-lookY)/8;
+		if(mouse_x>0) {
+			
+			mouseLastX = mouse_x;
+			mouseLastY = mouse_y;
+		}
+		
+		lookX += (mouseLastX-lookX)/8;
+		lookY += (mouseLastY-lookX)/8;
 	}
 } else {
 	lookX = room_width/2
 	lookY = room_height/2
 }
 
-x = clamp(lookX,camWidth/2,room_width-camWidth/2)
-y += (lookY-y)/6
+x = clamp(lookX,camRad,room_width-camRad)
+y = clamp(lookY,0,room_height)
 
 
 var finX = round(x)

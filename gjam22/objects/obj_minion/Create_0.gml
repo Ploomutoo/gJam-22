@@ -5,7 +5,7 @@ owner = noone;
 target_obj = noone;
 target_x = x;
 target_y = y;
-target_buffer = 5;
+target_buffer = 16;
 state = st.carry;
 
 wiggle_amt = 45;
@@ -23,6 +23,7 @@ item_carry = noone;
 //stats
 combat_speed = 1;
 combat_damage = 1;
+combat_disable = false;
 
 enum st
 {
@@ -36,6 +37,7 @@ enum st
 
 function recallFunc() {
 	
+	animDir = -1;
 	state = st.recall;
 	/*with(obj_player) {
 		

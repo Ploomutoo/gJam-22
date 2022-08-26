@@ -1,0 +1,1 @@
+combat_disable = false;

@@ -1,11 +1,15 @@
 #region setting inputs
+var mlx = oCamera.mouseLastX;
+var mly = oCamera.mouseLastY;
+
 inp_x = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 inp_y = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 inp_move = abs(inp_x) || abs(inp_y);
 inp_dir = point_direction(0, 0, inp_x, inp_y);
-inp_aim = point_direction(x, y, mouse_x, mouse_y);
+inp_aim = point_direction(x, y, mlx, mly);
 inp_prim = mouse_check_button_pressed(mb_left);
 inp_sec = mouse_check_button_pressed(mb_right);
+
 
 if(keyboard_check_pressed(vk_space) && z <= 0)
 {
@@ -27,14 +31,14 @@ event_inherited();
 if(inp_prim && array_length(minion_arr) > 0)
 {	
 	if(!audio_is_playing(bark)) bark = audio_play_sound(choose(sndKing1,sndKing3),0,0);
-	var target = instance_nearest(mouse_x,mouse_y,obj_interactible);
-	if(target = noone || point_distance(mouse_x,mouse_y,target.x,target.y) > 128)
+	var target = instance_nearest(mlx,mly,obj_interactible);
+	if(target = noone || point_distance(mlx,mly,target.x,target.y) > 128)
 	{	
 		with(minion_arr[minion_selected]) {
 			target_obj = noone;
 			state = st.move;
-			target_x = mouse_x;
-			target_y = mouse_y;
+			target_x = mlx;
+			target_y = mly;
 		}
 	}
 	else
@@ -64,11 +68,18 @@ if(inp_prim && array_length(minion_arr) > 0)
 //recall
 else if(inp_sec)
 {	
+	with(obj_ui) {
+		drawCirc = 60;
+		dcx = mlx;
+		dcy = mly;
+		dcr = other.recall_radius;
+	}
+
 	if(!audio_is_playing(bark)) bark = audio_play_sound(sndKing2,0,0);
 	for(var i = 0; i < array_length(busy_arr); i++)
 	{
 		var target = busy_arr[i];
-		if(target = noone || point_distance(mouse_x,mouse_y,target.x,target.y) > recall_radius) continue;
+		if(target = noone || point_distance(mlx,mly,target.x,target.y) > recall_radius) continue;
 
 		if(target.state != st.carry && target.state != st.recall) with(target) {
 		
@@ -90,3 +101,5 @@ if(array_length(minion_arr) > 1)
 	if(mouse_wheel_down()) minCycle(1);
 	if(mouse_wheel_up()) minCycle(-1);
 }
+
+progress = clamp(y/room_height,0,1)

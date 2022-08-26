@@ -19,4 +19,5 @@ for(i = 0; i<bgTiles; i++) {
 	draw_sprite_ext(bgSprite,1,room_width-ix,iy2,-1,1,0,c_white,1);
 	iy2+=sprite_get_height(bgSprite);
 }
-	
+
+if(y>room_height-camHeight)draw_sprite(spr_arrow,0,x,y+camHeight/2-16);

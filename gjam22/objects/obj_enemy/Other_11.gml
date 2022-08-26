@@ -2,8 +2,9 @@
 //if(!instance_exists(id)) exit;
 
 var ix = random(room_width);
-var iy = random(room_height);
+var iy = oCamera.y+random(room_width)-room_width/2;
 
+createAt(obj_poof);
 instance_create_layer(ix,iy,layer,object_index);
 
 //Drops

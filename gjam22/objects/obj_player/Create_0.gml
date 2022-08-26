@@ -12,6 +12,10 @@ recall_radius = 128;
 max_move_force = 1;
 bark = audio_play_sound(sndKing1,0,0);
 
+coins = 0;
+food = 0;
+progress = 0;
+
 //sorting minion array
 function minion_sort (_elm1, _elm2)
 {
@@ -30,4 +34,5 @@ repeat(minion_slots)
 }
 
 array_sort(minion_arr,minion_sort);
+instance_create_layer(0,-64,layer,oKillWall);
 createAt(obj_ui);
