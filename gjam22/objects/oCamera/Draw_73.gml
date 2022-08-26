@@ -20,4 +20,4 @@ for(i = 0; i<bgTiles; i++) {
 	iy2+=sprite_get_height(bgSprite);
 }
 
-if(y>room_height-camHeight)draw_sprite(spr_arrow,0,x,y+camHeight/2-16);
+//if(y>room_height-camHeight)draw_sprite(spr_arrow,0,x,y+camHeight/2-16);

@@ -2,15 +2,15 @@ event_inherited();
 
 //stats
 minion_slots = 7;
-minion_radius = max(sprite_get_bbox_right(sprite_index)-sprite_get_bbox_left(sprite_index), sprite_get_bbox_top(sprite_index)-sprite_get_bbox_bottom(sprite_index))/2;
+minion_radius = 64;
 
 minion_arr = [];
 busy_arr = [];
 minion_selected = 0;
 recall_radius = 128;
 
-max_move_force = 1;
-bark = audio_play_sound(sndKing1,0,0);
+max_move_force = 0.5;
+bark = 0
 
 coins = 0;
 food = 0;
@@ -34,5 +34,5 @@ repeat(minion_slots)
 }
 
 array_sort(minion_arr,minion_sort);
-instance_create_layer(0,-64,layer,oKillWall);
+instance_create_layer(0,room_height+room_speed*5,layer_get_id("dark"),oKillWall);
 createAt(obj_ui);
