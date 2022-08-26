@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"sndMinionAtk","path":"sounds/sndMinionAtk/sndMinionAtk.yy",},"order":3,},
+    {"id":{"name":"talkGremlinNew","path":"sounds/talkGremlinNew/talkGremlinNew.yy",},"order":9,},
     {"id":{"name":"scribble_font_bake_outline_8dir_2px","path":"scripts/scribble_font_bake_outline_8dir_2px/scribble_font_bake_outline_8dir_2px.yy",},"order":2,},
     {"id":{"name":"sndKing2","path":"sounds/sndKing2/sndKing2.yy",},"order":6,},
     {"id":{"name":"scribble_anim_shake","path":"scripts/scribble_anim_shake/scribble_anim_shake.yy",},"order":6,},
@@ -97,7 +98,7 @@
     {"id":{"name":"spr_dirt","path":"sprites/spr_dirt/spr_dirt.yy",},"order":4,},
     {"id":{"name":"spr_minion","path":"sprites/spr_minion/spr_minion.yy",},"order":11,},
     {"id":{"name":"scribble_anim_wobble","path":"scripts/scribble_anim_wobble/scribble_anim_wobble.yy",},"order":9,},
-    {"id":{"name":"obj_ui","path":"objects/obj_ui/obj_ui.yy",},"order":4,},
+    {"id":{"name":"obj_ui","path":"objects/obj_ui/obj_ui.yy",},"order":5,},
     {"id":{"name":"obj_placeholder","path":"objects/obj_placeholder/obj_placeholder.yy",},"order":4,},
     {"id":{"name":"scribble_font_has_character","path":"scripts/scribble_font_has_character/scribble_font_has_character.yy",},"order":10,},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"order":0,},
@@ -144,7 +145,7 @@
     {"id":{"name":"spr_killwall","path":"sprites/spr_killwall/spr_killwall.yy",},"order":18,},
     {"id":{"name":"__scribble_font_add_all_from_project","path":"scripts/__scribble_font_add_all_from_project/__scribble_font_add_all_from_project.yy",},"order":5,},
     {"id":{"name":"spr_minionOn","path":"sprites/spr_minionOn/spr_minionOn.yy",},"order":5,},
-    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":3,},
+    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":2,},
     {"id":{"name":"__shd_scribble_bake_outline_4dir","path":"shaders/__shd_scribble_bake_outline_4dir/__shd_scribble_bake_outline_4dir.yy",},"order":1,},
     {"id":{"name":"scribble_font_set_style_family","path":"scripts/scribble_font_set_style_family/scribble_font_set_style_family.yy",},"order":14,},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},"order":0,},

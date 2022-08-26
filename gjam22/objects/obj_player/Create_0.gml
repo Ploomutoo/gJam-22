@@ -34,5 +34,5 @@ repeat(minion_slots)
 }
 
 array_sort(minion_arr,minion_sort);
-instance_create_layer(0,room_height+room_speed*5,layer_get_id("dark"),oKillWall);
+instance_create_layer(0,room_height+600,layer_get_id("dark"),oKillWall);
 createAt(obj_ui);

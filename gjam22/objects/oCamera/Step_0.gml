@@ -21,7 +21,7 @@ if(lookAt!=noone) {
 }
 
 x = clamp(lookX,camRad,room_width-camRad)
-y = clamp(lookY,0,room_height)
+y = clamp(lookY,0,room_height+camHeight/2)
 
 
 var finX = round(x)

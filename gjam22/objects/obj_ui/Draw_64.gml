@@ -1,12 +1,13 @@
 with(obj_player) {
 	
 	//Minion Array
+	draw_set_halign(fa_center);
 	var i = minion_slots-1;
 	var i2 = array_length(minion_arr)-1;
 	var hOffset = 16;
 	
 	draw_sprite_ext(spr_ui_backing,0,32,hOffset,1,minion_slots,0,c_white,1);
-	draw_text(16,hOffset+36+32*i,string(floor(move_force*100))+"%");
+	draw_text(32,hOffset+36+32*i,string(floor((i2+1)/(i+1)*100))+"%");
 	while(i>=0) {
 		
 		if(i>i2) draw_sprite(spr_minion,0,32,hOffset+16+32*i);
@@ -23,7 +24,6 @@ with(obj_player) {
 	
 	ix = 32;
 	i = oCamera.camHeight-32
-	draw_set_halign(fa_center);
 	draw_sprite(spr_item,0,ix,i-4);
 	draw_text(ix,i,string(food));
 	
@@ -41,7 +41,7 @@ with(obj_player) {
 	var ix = 1344+32; //Width 64
 	hOffset=16
 	var barHeight = (oCamera.camHeight-hOffset*2)/32
-	show_debug_message(string(barHeight))
+	//show_debug_message(string(barHeight))
 	draw_sprite_ext(spr_ui_backing,0,ix,hOffset,0.5,barHeight,0,c_white,1);
 	
 	draw_sprite(spr_ui_crown,0,ix,hOffset+barHeight*32*progress);
