@@ -31,11 +31,16 @@ level = 1;
 
 function foodCalc() 
 {	
-	if(food>5*power(2,level)) {
+	if(food>3*level) {
 		
+		food = 0;
 		level++;
-		if(level>2) skeleton_skin_set("weight-2");
 		minion_slots++;
+		if(level>2) {
+			
+			soundRand(sndHealth);
+			skeleton_skin_set("weight-2");
+		}
 	}
 	/*var bonemap = ds_map_create();
 	skeleton_bone_data_get("scaleBone", bonemap);

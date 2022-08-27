@@ -53,7 +53,7 @@ switch state
 			inp_move = true;
 			inp_dir = point_direction(x,y,target_x,target_y);
 		
-			if(point_distance(x, y, target_x, target_y) < target_buffer)
+			if(point_distance(x, y, target_x, target_y) < target_buffer+target_obj.collision_offset)
 			{	
 				if(target_obj.object_index=obj_placeholder){
 				

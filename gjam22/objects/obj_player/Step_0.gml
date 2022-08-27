@@ -149,3 +149,8 @@ if(array_length(minion_arr) > 1)
 
 if(inp_move && (skeleton_animation_get()="default" || skeleton_animation_get()="move")) walkSet();
 progress = clamp(y/room_height,0,1)
+if(progress=0) {
+	
+	vspeed = -5
+	if(y-oCamera.y>oCamera.camHeight/2) game_restart();
+}

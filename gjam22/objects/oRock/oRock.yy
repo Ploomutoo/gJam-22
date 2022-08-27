@@ -1,7 +1,10 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_rock",
+    "path": "sprites/spr_rock/spr_rock.yy",
+  },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -20,17 +23,17 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
-  "properties": [
-    {"varType":1,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"collision_offset","tags":[],"resourceType":"GMObjectProperty",},
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
+  "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "targets",
-    "path": "folders/Objects/game_objects/actors/targets.yy",
+    "name": "game_objects",
+    "path": "folders/Objects/game_objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_placeholder",
+  "name": "oRock",
   "tags": [],
   "resourceType": "GMObject",
 }

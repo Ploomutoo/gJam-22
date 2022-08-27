@@ -3,7 +3,7 @@
     "name": "spr_item",
     "path": "sprites/spr_item/spr_item.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": false,
   "spriteMaskId": null,
   "persistent": false,

@@ -42,7 +42,7 @@ function recallFunc() {
 		with(target_obj) {
 			
 			var i = array_find_index(engaged,other.id);
-			array_delete(engaged,i,1);
+			if(i>-1) array_delete(engaged,i,1);
 		}
 	}
 	animDir = -1;
