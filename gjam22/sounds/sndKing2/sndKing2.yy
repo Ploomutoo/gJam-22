@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.5,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sndKing2.wav",
-  "duration": 0.725646,
+  "soundFile": "sndKing2.mp3",
+  "duration": 0.548571,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
