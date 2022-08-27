@@ -6,6 +6,8 @@ minion_arr = [];
 busy_arr = [];
 minion_selected = 0;
 
+old_z = z;
+
 skeleton_animation_set("default");
 skeleton_skin_set("weight-1");
 skeleton_animation_mix("default","move",0.05);

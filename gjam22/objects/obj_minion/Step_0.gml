@@ -60,6 +60,7 @@ switch state
 					recallFunc();
 					item_carry = target_obj;
 					item_carry.hide = true;
+					soundRand(sndMinionGrab);
 				} else if(object_is_ancestor(target_obj.object_index,obj_enemy)){
 					
 					array_push(target_obj.engaged,id)

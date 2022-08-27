@@ -5,3 +5,4 @@ image_index = roll;
 
 if(roll<3) valMoney = 1;
 else if(roll<6) valFood = 1;
+else valHealth = 1;

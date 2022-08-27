@@ -17,3 +17,10 @@ if(valFood>0) {
 	with(obj_player) foodCalc();
 }
 
+if(valHealth>0) {
+	
+	soundRand(sndHealth);
+	obj_player.food+=valFood;
+	
+	with(obj_player) foodCalc();
+}

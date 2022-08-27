@@ -43,9 +43,21 @@ if(inp_dash && z <= 0)
 		array_push(busy_arr, minion_arr[i]);
 		array_delete(minion_arr, i, 1);
 	}
+	
+	//playing sound
+	soundRand(sndKingDash);
 }
 
+//setting old air position
+old_z = z;
+
 event_inherited();
+
+//playing land sound
+if(old_z > 0 && z <= 0)
+{
+	soundRand(sndKingLand);
+}
 
 #region abilities
 
