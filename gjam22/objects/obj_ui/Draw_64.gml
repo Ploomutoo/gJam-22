@@ -30,7 +30,7 @@ with(obj_player) {
 	i-=64
 	draw_sprite(spr_item,1,ix,i-4);
 	draw_text(ix,i,string(coins));
-	
+		
 	var ix = 1344+32; //Width 64
 	hOffset=16
 	var barHeight = (oCamera.camHeight-hOffset*2)/32
@@ -38,5 +38,14 @@ with(obj_player) {
 	
 	draw_sprite(spr_ui_crown,0,ix,hOffset+barHeight*32*progress);
 	if(oKillWall.progress>0) draw_sprite(spr_ui_crown,1,ix,hOffset+barHeight*32*oKillWall.progress);
+	
+	ix = 1408/2-16*max_hp
+	i = hp;
+	repeat(max_hp) {
+		if(i>0) draw_sprite(spr_hearts,0,ix,48);
+		else draw_sprite(spr_hearts,1,ix,48);
+		ix+=32;
+		i--;
+	}
 	
 }
