@@ -140,6 +140,7 @@
     {"id":{"name":"oIntro","path":"objects/oIntro/oIntro.yy",},"order":4,},
     {"id":{"name":"scribble_font_delete","path":"scripts/scribble_font_delete/scribble_font_delete.yy",},"order":5,},
     {"id":{"name":"obj_minion_normal","path":"objects/obj_minion_normal/obj_minion_normal.yy",},"order":13,},
+    {"id":{"name":"spr_carpet","path":"sprites/spr_carpet/spr_carpet.yy",},"order":19,},
     {"id":{"name":"obj_poof","path":"objects/obj_poof/obj_poof.yy",},"order":6,},
     {"id":{"name":"scribble_super_glyph_delete","path":"scripts/scribble_super_glyph_delete/scribble_super_glyph_delete.yy",},"order":4,},
     {"id":{"name":"sndEnemyDie","path":"sounds/sndEnemyDie/sndEnemyDie.yy",},"order":2,},
