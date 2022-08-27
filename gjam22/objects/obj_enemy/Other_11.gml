@@ -5,7 +5,7 @@ var ix = random(room_width);
 var iy = oCamera.y+random(room_width)-room_width/2;
 
 createAt(obj_poof);
-instance_create_layer(ix,iy,layer,object_index);
+//instance_create_layer(ix,iy,layer,object_index);
 
 //Drops
 var drop = instance_create_layer(x,y,layer,obj_pickup);

@@ -24,6 +24,12 @@ switch state
 	case st.idle://--------------------------
 	
 		anim_to = "guard";
+		var target = instance_nearest(x,y,obj_interactible);
+		if(instance_exists(target) && point_distance(x, y, target.x, target.y) <= detect_radius_idle)
+		{
+			target_obj = target;
+			state = st.go;
+		}
 	break;
 	
 	case st.move://--------------------------
@@ -116,6 +122,28 @@ switch state
 				array_sort(minion_arr,minion_sort);
 			}
 		}
+	break;
+	
+	case st.king_dash://--------------------------
+		
+		anim_to="idle";
+		inp_move = false;
+	
+		if(state_timer < 0)
+		{
+			state_timer = 30;
+		}
+		else if(state_timer > 0)
+		{
+			state_timer -= 1;
+		}
+		
+		if(state_timer = 0)
+		{
+			state_timer = -1;
+			recallFunc();
+		}
+		
 	break;
 }
 #endregion

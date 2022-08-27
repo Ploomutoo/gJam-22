@@ -11,10 +11,5 @@ inp_sec = false;
 dspeed = 0;
 grav = 0.25;
 
-drag = 0.25;
-air_drag = 0.1;
-
 //stats
-max_hp = 5;
 hp = max_hp;
-move_force = 1;

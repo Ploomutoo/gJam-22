@@ -27,7 +27,10 @@
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"max_hp","path":"objects/obj_actor/obj_actor.yy",},"objectId":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"value":"10","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"move_force","path":"objects/obj_actor/obj_actor.yy",},"objectId":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"value":"0.75","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "actors",
     "path": "folders/Objects/game_objects/actors.yy",

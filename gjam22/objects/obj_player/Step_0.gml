@@ -9,19 +9,41 @@ inp_dir = point_direction(0, 0, inp_x, inp_y);
 inp_aim = point_direction(x, y, mlx, mly);
 inp_prim = mouse_check_button_pressed(mb_left);
 inp_sec = mouse_check_button_pressed(mb_right);
+inp_dash = keyboard_check_pressed(vk_space);
 
-
-if(keyboard_check_pressed(vk_space) && z <= 0)
-{
-	dspeed = 5;
-}
 #endregion
 
 #region setting carry speed
 
 move_force = max_move_force * array_length(minion_arr)/minion_slots;
-//z = max(z,move_force*4)
 #endregion
+
+//dash
+if(inp_dash && z <= 0)
+{
+	var minion_full = array_length(minion_arr)/minion_slots;
+	//setting dash direction
+	var dash_dir = inp_aim;
+	if(inp_move)
+	{
+		dash_dir = inp_dir;
+	}
+	
+	//applying speed
+	var dash_height = 5;
+	var dash_speed = 25;
+	dspeed = dash_height * minion_full;
+	hspeed += lengthdir_x(dash_speed * minion_full, dash_dir);
+	vspeed += lengthdir_y(dash_speed * minion_full, dash_dir);
+	
+	//deploying all followers
+	for(var i = array_length(minion_arr)-1; i >= 0; i--)
+	{
+		minion_arr[i].state = st.king_dash;
+		array_push(busy_arr, minion_arr[i]);
+		array_delete(minion_arr, i, 1);
+	}
+}
 
 event_inherited();
 
@@ -32,6 +54,7 @@ if(inp_prim && array_length(minion_arr) > 0)
 {	
 	if(!audio_is_playing(bark)) bark = audio_play_sound(choose(sndKing1,sndKing3),0,0);
 	var target = instance_nearest(mlx,mly,obj_interactible);
+	//moving to empty position
 	if(target = noone || point_distance(mlx,mly,target.x,target.y) > 128)
 	{	
 		with(minion_arr[minion_selected]) {
@@ -43,6 +66,7 @@ if(inp_prim && array_length(minion_arr) > 0)
 	}
 	else
 	{
+		//if a pickup
 		if(target.object_index = obj_pickup || object_is_ancestor(target.object_index,obj_pickup)) {
 			
 			with(target) {

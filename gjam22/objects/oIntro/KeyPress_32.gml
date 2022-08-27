@@ -13,6 +13,7 @@ if(pageOn<array_length(page)-1) {
 	exit;
 }
 
+keyboard_clear(vk_space);
 instance_activate_all();
 layer_set_visible(layer_get_id("Background"),1);
 instance_destroy();
