@@ -1,7 +1,7 @@
-if(wave_timer <= 0)
+if(obj_player.y <= room_height-wave_num*wave_interval)
 {
+	show_debug_message("new wave");
 	wave_num++;
-	wave_timer = wave_dur;
 	var wave_formation = irandom(2);
 	switch wave_formation
 	{
@@ -10,7 +10,7 @@ if(wave_timer <= 0)
 		var count = calc_difficulty(wave_num);
 		for(var i = 0; i < count; i++)
 		{
-			var spawn_dist = max(oCamera.camWidth, oCamera.camHeight) + 32;
+			var spawn_dist = max(oCamera.camWidth, oCamera.camHeight)/2 + 32;
 			var spawn_dir = 360/count*i;
 			var spawn_x = lengthdir_x(spawn_dist, spawn_dir) + oCamera.x;
 			var spawn_y = lengthdir_y(spawn_dist, spawn_dir) + oCamera.y;
@@ -34,7 +34,7 @@ if(wave_timer <= 0)
 		//pincer
 		case 2:
 		var count = calc_difficulty(wave_num);
-		var spawn_dist = max(oCamera.camWidth, oCamera.camHeight) + 64;
+		var spawn_dist = max(oCamera.camWidth, oCamera.camHeight)/2 + 64;
 		var spawn_dir = random(360);
 		for(var i = 0; i < count; i++)
 		{
@@ -48,4 +48,3 @@ if(wave_timer <= 0)
 
 //incrementing timers
 game_timer++;
-wave_timer--;
