@@ -24,9 +24,15 @@ function walkSet() {
 //resources
 coins = 0;
 food = 0;
+level = 1;
 
 function foodCalc() 
-{
+{	
+	if(food>5*power(2,level)) {
+		
+		level++;
+		minion_slots++;
+	}
 	/*var bonemap = ds_map_create();
 	skeleton_bone_data_get("scaleBone", bonemap);
 	show_debug_message("scale bone was "+string(bonemap[?"xscale"]))
