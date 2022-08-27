@@ -24,11 +24,11 @@ with(obj_player) {
 	
 	ix = 32;
 	i = oCamera.camHeight-32
-	draw_sprite(spr_item,0,ix,i-4);
+	draw_sprite(spr_item,4,ix,i-4);
 	draw_text(ix,i,string(food));
 	
 	i-=64
-	draw_sprite(spr_food,0,ix,i-4);
+	draw_sprite(spr_item,1,ix,i-4);
 	draw_text(ix,i,string(coins));
 	
 	//Busy Array

@@ -1,6 +1,7 @@
 event_inherited();
 
-val_money = 1;
-val_calories = 0;
+var roll = irandom(image_number-1)
+image_index = roll;
 
-reserved = false;
+if(roll<3) valMoney = 1;
+else if(roll<6) valFood = 1;

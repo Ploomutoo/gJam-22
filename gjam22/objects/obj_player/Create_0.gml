@@ -10,7 +10,6 @@ skeleton_animation_set("default");
 skeleton_animation_mix("default","move",0.2);
 skeleton_animation_mix("move","default",0.2);
 //other animations are move and command
-weightScale = "scaleBone";
 
 function walkSet() {
 	
@@ -25,6 +24,17 @@ function walkSet() {
 //resources
 coins = 0;
 food = 0;
+
+function foodCalc() 
+{
+	var bonemap = ds_map_create();
+	skeleton_bone_data_get("scaleBone", bonemap);
+	show_debug_message("scale bone was "+string(bonemap[?"xscale"]))
+	ds_map_replace(bonemap, "xscale", 1+food);
+	show_debug_message("scale bone is "+string(bonemap[?"xscale"]))
+	skeleton_bone_data_set("scaleBone", bonemap);
+	ds_map_destroy(bonemap);
+}
 
 //counters and tracking
 bark = 0

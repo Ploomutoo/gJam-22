@@ -1,17 +1,22 @@
 /// @description Killed
-//if(!instance_exists(id)) exit;
-
-var ix = random(room_width);
-var iy = oCamera.y+random(room_width)-room_width/2;
-
 createAt(obj_poof);
 //instance_create_layer(ix,iy,layer,object_index);
 
+function fDrop() 
+{	
+	var drop = choose(obj_pickup);
+	drop = instance_create_layer(x,y,layer,drop);
+	drop.speed = 10
+	drop.direction = random(360);
+	drop.dspeed = 5;
+}
+
 //Drops
-var drop = instance_create_layer(x,y,layer,obj_pickup);
-drop.speed = 10
-drop.direction = random(360);
-drop.dspeed = 5;
+while(loot>1) {
+	fDrop();
+} 
+
+if(loot>random(1)) fDrop();
 
 soundRand(sndEnemyDie);
 instance_destroy();

@@ -77,6 +77,7 @@ if(inp_prim && array_length(minion_arr) > 0)
 				
 				var placeholder = createAt(obj_placeholder);
 				placeholder.sprite_index = sprite_index;
+				placeholder.image_index = image_index;
 				placeholder.realObj = self;
 				
 				target = placeholder;

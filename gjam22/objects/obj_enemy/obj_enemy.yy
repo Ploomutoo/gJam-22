@@ -32,6 +32,7 @@
   "properties": [
     {"varType":0,"value":"180","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"wiggle_amt","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"0.025","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"wiggle_speed","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"0.99","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"loot","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [
     {"propertyId":{"name":"move_force","path":"objects/obj_actor/obj_actor.yy",},"objectId":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"value":"0.5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
