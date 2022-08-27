@@ -1,4 +1,6 @@
 event_inherited();
+y = room_height;
+x = room_width/2;
 
 minion_radius = 64;
 
@@ -28,6 +30,7 @@ function walkSet() {
 coins = 0;
 food = 0;
 level = 1;
+win = false;
 
 function foodCalc() 
 {	
@@ -72,6 +75,3 @@ function minion_sort (_elm1, _elm2)
     return sort_type*100 + sort_deployed*10 + sort_id;
 }
 array_sort(minion_arr,minion_sort);
-
-instance_create_layer(0,room_height+600,layer_get_id("dark"),oKillWall);
-createAt(obj_ui);

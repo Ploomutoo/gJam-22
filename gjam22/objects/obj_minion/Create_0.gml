@@ -1,4 +1,5 @@
 event_inherited();
+persistent = true;
 
 #region sprite and animation
 skeleton_animation_set("walks");

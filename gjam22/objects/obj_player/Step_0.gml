@@ -1,3 +1,11 @@
+if(win) {
+	
+	vspeed = -5
+	if(!audio_is_playing(bark)) room_goto(rm_shop);	
+	
+	exit;
+}
+
 #region setting inputs
 var mlx = oCamera.mouseLastX;
 var mly = oCamera.mouseLastY;
@@ -149,8 +157,8 @@ if(array_length(minion_arr) > 1)
 
 if(inp_move && (skeleton_animation_get()="default" || skeleton_animation_get()="move")) walkSet();
 progress = clamp(y/room_height,0,1)
-if(progress=0) {
+if(y<-128) {
 	
-	vspeed = -5
-	if(y-oCamera.y>oCamera.camHeight/2) game_restart();
+	win = true;
+	bark = soundRand(sndWin);
 }

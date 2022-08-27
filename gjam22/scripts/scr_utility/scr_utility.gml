@@ -3,6 +3,7 @@ function soundRand(play, pitch_variation = 0.4) {
 	//audio_stop_sound(play);
 	var inst = audio_play_sound(play,0,0);
 	audio_sound_pitch(inst,1+random_range(-pitch_variation/2,pitch_variation/2));
+	return(inst);
 }
 
 function barkRand() {
