@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "0pSaYISiASw", "spine": "4.0-from-4.1.08", "x": -61.89, "y": -59.3, "width": 124, "height": 138 },
+"skeleton": { "hash": "Uaak2AKDa7k", "spine": "4.0-from-4.1.08", "x": -61.89, "y": -59.3, "width": 124, "height": 137 },
 "bones": [
 	{ "name": "root", "y": -17.66 },
 	{ "name": "seat", "parent": "root" },
@@ -14,10 +14,10 @@
 ],
 "slots": [
 	{ "name": "seat", "bone": "seat", "attachment": "seat" },
-	{ "name": "belly", "bone": "bodt", "attachment": "belly" },
-	{ "name": "shoulders", "bone": "shoulder", "attachment": "shoulders" },
-	{ "name": "head", "bone": "bone3", "attachment": "head" },
-	{ "name": "face", "bone": "face", "attachment": "face" },
+	{ "name": "belly", "bone": "bodt", "attachment": "bellySkin" },
+	{ "name": "shoulders", "bone": "shoulder", "attachment": "shoulderSlot" },
+	{ "name": "head", "bone": "bone3", "attachment": "headSkin" },
+	{ "name": "face", "bone": "face", "attachment": "defaultFace" },
 	{ "name": "crown", "bone": "bone4", "attachment": "crown" },
 	{ "name": "arms", "bone": "shoulder", "attachment": "arms" }
 ],
@@ -65,36 +65,60 @@
 				"arms": {
 					"type": "mesh",
 					"uvs": [ 1, 0.30467, 1, 1, 0.7154, 1, 0.27016, 1, 0, 1, 0, 0.29398, 0.2958, 0.28839, 0.72484, 0.31242 ],
-					"triangles": [ 6, 3, 5, 3, 4, 5, 3, 6, 2, 2, 6, 7, 7, 0, 1, 2, 7, 1 ],
+					"triangles": [ 3, 6, 2, 3, 4, 5, 6, 3, 5, 2, 7, 1, 7, 0, 1, 2, 6, 7 ],
 					"vertices": [ 1, 7, -10.32, 6.28, 1, 1, 7, 20.06, 20.1, 1, 1, 7, 31.26, -4.5, 1, 1, 6, 28.13, 7.14, 1, 1, 6, 22.15, -17.82, 1, 1, 6, -10.81, -9.93, 1, 1, 6, -4.52, 17.47, 1, 1, 7, 0.85, -17.36, 1 ],
 					"hull": 8
 				},
 				"arms2": {
 					"type": "mesh",
 					"uvs": [ 0.99999, 0.61456, 0.71445, 0.69502, 0.3196, 1, 0, 1, 0, 0.33696, 0.31814, 0.31298, 0.65054, 0, 0.93584, 0 ],
-					"triangles": [ 2, 3, 4, 2, 5, 1, 2, 4, 5, 1, 6, 7, 1, 7, 0, 5, 6, 1 ],
+					"triangles": [ 2, 4, 5, 2, 5, 1, 2, 3, 4, 5, 6, 1, 1, 7, 0, 1, 6, 7 ],
 					"vertices": [ 1, 7, 1.26, 13.75, 1, 1, 7, 17.88, -11.32, 1, 1, 6, 31.18, 7, 1, 1, 6, 23.44, -25.32, 1, 1, 6, -14.61, -16.21, 1, 1, 6, -8.28, 16.29, 1, 1, 7, -16.69, -34.35, 1, 1, 7, -28.98, -7.35, 1 ],
 					"hull": 8
 				}
-			},
-			"belly": {
-				"belly": { "x": 0.55, "y": 11.66, "rotation": -0.08, "width": 93, "height": 64 }
 			},
 			"crown": {
 				"crown": { "x": 0.88, "y": 3.69, "width": 26, "height": 23 }
 			},
 			"face": {
-				"face": { "x": -17.59, "y": -0.22, "width": 27, "height": 11 },
 				"face2": { "x": -18.09, "y": 0.78, "width": 26, "height": 15 }
-			},
-			"head": {
-				"head": { "x": 1.07, "y": 17.29, "width": 70, "height": 56 }
 			},
 			"seat": {
 				"seat": { "x": 0.11, "y": 9.37, "width": 124, "height": 102 }
+			}
+		}
+	},
+	{
+		"name": "weight-1",
+		"attachments": {
+			"belly": {
+				"bellySkin": { "name": "belly", "x": 0.55, "y": 11.66, "rotation": -0.08, "width": 93, "height": 64 }
+			},
+			"face": {
+				"defaultFace": { "name": "face", "x": -17.59, "y": -0.22, "width": 27, "height": 11 }
+			},
+			"head": {
+				"headSkin": { "name": "head", "x": 1.07, "y": 17.29, "width": 70, "height": 56 }
 			},
 			"shoulders": {
-				"shoulders": { "x": 0.09, "y": 4.11, "width": 88, "height": 55 }
+				"shoulderSlot": { "name": "shoulders", "x": 0.09, "y": 4.11, "width": 88, "height": 55 }
+			}
+		}
+	},
+	{
+		"name": "weight-2",
+		"attachments": {
+			"belly": {
+				"bellySkin": { "name": "belly2", "x": 0.52, "y": 10.5, "rotation": -0.08, "width": 103, "height": 67 }
+			},
+			"face": {
+				"defaultFace": { "name": "face3", "x": -17.42, "y": -1.16, "width": 25, "height": 10 }
+			},
+			"head": {
+				"headSkin": { "name": "head2", "x": 0.5, "y": 15.8, "width": 67, "height": 57 }
+			},
+			"shoulders": {
+				"shoulderSlot": { "name": "shoulders2", "x": -0.03, "y": 4.11, "width": 95, "height": 53 }
 			}
 		}
 	}
@@ -111,7 +135,7 @@
 			"face": {
 				"attachment": [
 					{ "time": 0.2333, "name": "face2" },
-					{ "time": 0.5, "name": "face" }
+					{ "time": 0.5, "name": "defaultFace" }
 				]
 			}
 		},
@@ -172,10 +196,11 @@
 			},
 			"bodt": {
 				"translate": [
-					{ "time": 0.2333 },
+					{ "y": 1.48, "curve": "stepped" },
+					{ "time": 0.2333, "y": 1.48 },
 					{ "time": 0.3, "x": 0.18, "y": 6.78 },
 					{ "time": 0.3667, "x": 0.19, "y": 7.58 },
-					{ "time": 0.4333 }
+					{ "time": 0.4333, "x": 0.01, "y": 0.15 }
 				],
 				"scale": [
 					{
@@ -395,6 +420,9 @@
 					{ "time": 0.8, "value": -1.11 },
 					{ "time": 1 }
 				],
+				"translate": [
+					{ "y": 1.48 }
+				],
 				"scale": [
 					{
 						"curve": [ 0.011, 1, 0.022, 1.018, 0.011, 1, 0.022, 0.991 ]
@@ -551,8 +579,7 @@
 			"seat": {
 				"translate": [
 					{
-						"y": 2.56,
-						"curve": [ 0.048, 0, 0.085, 0, 0.048, 2.56, 0.085, -5.76 ]
+						"curve": [ 0.048, 0, 0.085, 0, 0.048, 0, 0.085, -5.76 ]
 					},
 					{ "time": 0.1333, "y": -5.76 },
 					{

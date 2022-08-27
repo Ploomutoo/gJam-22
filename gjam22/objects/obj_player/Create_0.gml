@@ -7,8 +7,9 @@ busy_arr = [];
 minion_selected = 0;
 
 skeleton_animation_set("default");
-skeleton_animation_mix("default","move",0.2);
-skeleton_animation_mix("move","default",0.2);
+skeleton_skin_set("weight-1");
+skeleton_animation_mix("default","move",0.05);
+skeleton_animation_mix("move","default",0.05);
 //other animations are move and command
 
 function walkSet() {
@@ -31,6 +32,7 @@ function foodCalc()
 	if(food>5*power(2,level)) {
 		
 		level++;
+		if(level>2) skeleton_skin_set("weight-2");
 		minion_slots++;
 	}
 	/*var bonemap = ds_map_create();

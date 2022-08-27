@@ -13,7 +13,7 @@ if(lookAt!=noone) {
 		}
 		
 		lookX += (mouseLastX-lookX)/8;
-		lookY += (mouseLastY-lookY)/8;
+		lookY += (mouseLastY-lookX)/8;
 	}
 } else {
 	lookX = room_width/2
