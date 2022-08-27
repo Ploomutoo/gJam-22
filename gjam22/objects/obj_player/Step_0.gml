@@ -52,7 +52,11 @@ event_inherited();
 //deploy
 if(inp_prim && array_length(minion_arr) > 0)
 {	
-	if(!audio_is_playing(bark)) bark = audio_play_sound(choose(sndKing1,sndKing3),0,0);
+	audio_stop_sound(bark);
+	bark = audio_play_sound(choose(sndKing1,sndKing2),0,0);
+	image_speed = 1;
+	skeleton_animation_set("command");
+	
 	var target = instance_nearest(mlx,mly,obj_interactible);
 	//moving to empty position
 	if(target = noone || point_distance(mlx,mly,target.x,target.y) > 128)
@@ -98,8 +102,12 @@ else if(inp_sec)
 		dcy = mly;
 		dcr = other.recall_radius;
 	}
-
-	if(!audio_is_playing(bark)) bark = audio_play_sound(sndKing2,0,0);
+	
+	audio_stop_sound(bark);
+	bark = audio_play_sound(sndKing3,0,0);
+	image_speed = 1;
+	skeleton_animation_set("command");
+	
 	for(var i = 0; i < array_length(busy_arr); i++)
 	{
 		var target = busy_arr[i];
@@ -126,4 +134,5 @@ if(array_length(minion_arr) > 1)
 	if(mouse_wheel_up()) minCycle(-1);
 }
 
+if(inp_move && skeleton_animation_get()="default") walkSet();
 progress = clamp(y/room_height,0,1)

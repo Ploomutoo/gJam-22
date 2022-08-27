@@ -6,6 +6,22 @@ minion_arr = [];
 busy_arr = [];
 minion_selected = 0;
 
+skeleton_animation_set("default");
+skeleton_animation_mix("default","move",0.2);
+skeleton_animation_mix("move","default",0.2);
+//other animations are move and command
+weightScale = "scaleBone";
+
+function walkSet() {
+	
+	image_speed = 1;
+	if(speed>0) {
+		skelSet("move")
+		image_speed=1+speed/3
+		
+	} else skelSet("default")
+}
+
 //resources
 coins = 0;
 food = 0;
