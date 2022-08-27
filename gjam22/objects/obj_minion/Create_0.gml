@@ -38,6 +38,13 @@ enum st
 #region method functions
 function recallFunc() {
 	
+	if(target_obj!=noone && object_get_parent(target_obj.object_index)=obj_enemy) {
+		with(target_obj) {
+			
+			var i = array_find_index(engaged,other.id);
+			array_delete(engaged,i,1);
+		}
+	}
 	animDir = -1;
 	state = st.recall;
 }
