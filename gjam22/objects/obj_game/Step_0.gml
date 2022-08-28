@@ -7,7 +7,7 @@ if(obj_player.y <= room_height-wave_num*wave_interval)
 	{
 		//surround
 		case 0:
-		var count = calc_difficulty(wave_num);
+		var count = calc_difficulty(wave_num+wave_offset);
 		for(var i = 0; i < count; i++)
 		{
 			var spawn_dist = max(oCamera.camWidth, oCamera.camHeight)/2 + 32;
@@ -20,7 +20,7 @@ if(obj_player.y <= room_height-wave_num*wave_interval)
 		
 		//rush
 		case 1:
-		var count = calc_difficulty(wave_num);
+		var count = calc_difficulty(wave_num+wave_offset);
 		var spawn_dist = max(oCamera.camWidth, oCamera.camHeight)/2 + 64;
 		var spawn_dir = random(360);
 		for(var i = 0; i < count; i++)
@@ -33,7 +33,7 @@ if(obj_player.y <= room_height-wave_num*wave_interval)
 		
 		//pincer
 		case 2:
-		var count = calc_difficulty(wave_num);
+		var count = calc_difficulty(wave_num+wave_offset);
 		var spawn_dist = max(oCamera.camWidth, oCamera.camHeight)/2 + 64;
 		var spawn_dir = random(360);
 		for(var i = 0; i < count; i++)
