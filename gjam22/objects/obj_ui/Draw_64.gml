@@ -25,7 +25,7 @@ with(obj_player) {
 	ix = 32;
 	i = oCamera.camHeight-32
 	draw_sprite(spr_item,4,ix,i-4);
-	draw_text(ix,i,string(food));
+	draw_text(ix,i,string(food)+"/"+string(5*level));
 	
 	i-=64
 	draw_sprite(spr_item,1,ix,i-4);

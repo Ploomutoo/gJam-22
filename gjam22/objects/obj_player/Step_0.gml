@@ -73,7 +73,7 @@ if(old_z > 0 && z <= 0)
 if(inp_prim && array_length(minion_arr) > 0)
 {	
 	with(obj_ui) {
-		drawCirc = 30;
+		drawCirc = 60;
 		dcx = mlx;
 		dcy = mly;
 		dcr = 16;
