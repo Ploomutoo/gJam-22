@@ -8,6 +8,9 @@ y = room_height;
 x = room_width/2;
 win = false;
 
+oCamera.mouseLastX = x;
+oCamera.mouseLastY = y;
+
 with(obj_minion) {
 	
 	x = other.x;

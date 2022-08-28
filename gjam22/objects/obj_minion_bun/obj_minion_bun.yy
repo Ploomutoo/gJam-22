@@ -4,7 +4,7 @@
     "path": "sprites/spr_minionSpine/spr_minionSpine.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {

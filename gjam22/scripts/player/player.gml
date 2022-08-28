@@ -1,3 +1,10 @@
+function textPopup(ix,iy,text) {
+
+	var obj = instance_create_layer(ix,iy,layer,oPopupText);
+	with(obj) txt = scribble("[fa_center][scale,1.5]"+text);
+
+}
+
 function minCycle(add){
 	
 	soundRand(sndUiClick);

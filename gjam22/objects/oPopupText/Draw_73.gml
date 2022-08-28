@@ -1,0 +1,1 @@
+txt.draw(x,y)
