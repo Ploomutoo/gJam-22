@@ -35,16 +35,18 @@ win = false;
 
 function foodCalc() 
 {	
-	if(food>3*level) {
+	if(food>5*level) {
 		
 		food = 0;
 		level++;
 		minion_slots++;
-		if(level>2) {
+		soundRand(sndHealth);
+		if(level>2 && skeleton_skin_get()="weight-1") {
 			
-			soundRand(sndHealth);
+			textPopup(x,y-128,"LARD UP!");
 			skeleton_skin_set("weight-2");
-		}
+			
+		} else textPopup(x,y-128,"LEVEL UP!")
 	}
 	/*var bonemap = ds_map_create();
 	skeleton_bone_data_get("scaleBone", bonemap);
@@ -58,14 +60,21 @@ function foodCalc()
 //counters and tracking
 bark = 0
 progress = 0;
-iFrames = 100;
+iFrames = 0;
 
 //spawning minions
-repeat(minion_slots)
-{	
-	var inst = createAt(obj_minion_normal);
+function addMinion(object) {
+	
+	var inst = createAt(object);
 	inst.owner = id;
 	array_push(minion_arr, inst);
+	
+	return(inst);
+}
+
+repeat(minion_slots)
+{	
+	addMinion(obj_minion_normal);
 }
 
 //sorting minion array

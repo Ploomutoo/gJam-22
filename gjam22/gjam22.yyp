@@ -111,6 +111,7 @@
     {"id":{"name":"__scribble_class_model","path":"scripts/__scribble_class_model/__scribble_class_model.yy",},"order":3,},
     {"id":{"name":"scribble_super_glyph_copy","path":"scripts/scribble_super_glyph_copy/scribble_super_glyph_copy.yy",},"order":2,},
     {"id":{"name":"scribble_glyph_get","path":"scripts/scribble_glyph_get/scribble_glyph_get.yy",},"order":15,},
+    {"id":{"name":"oPopupText","path":"objects/oPopupText/oPopupText.yy",},"order":7,},
     {"id":{"name":"sndKing1","path":"sounds/sndKing1/sndKing1.yy",},"order":8,},
     {"id":{"name":"spr_hearts","path":"sprites/spr_hearts/spr_hearts.yy",},"order":20,},
     {"id":{"name":"scribble_fallback_font","path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},"order":12,},
