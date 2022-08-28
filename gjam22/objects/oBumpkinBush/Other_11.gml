@@ -4,7 +4,7 @@ createAt(obj_poof);
 
 function fDrop() 
 {	
-	var drop = choose(obj_pickup);
+	var drop = obj_p_food;
 	drop = instance_create_layer(x,y,layer,drop);
 	drop.speed = 5
 	drop.image_index = 3;

@@ -1,4 +1,4 @@
 event_inherited();
 
-value = 1+irandom(2);
-image_index = value-1;
+value = 1;
+image_index = irandom(2);

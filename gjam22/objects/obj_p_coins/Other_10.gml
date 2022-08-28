@@ -1,6 +1,2 @@
-soundRand(sndHealth);
-with(obj_player) {
-	
-	hp++;
-	if(hp>max_hp) hp = max_hp;
-}
+soundRand(sndCoin);
+obj_player.coins+=value;
