@@ -154,11 +154,13 @@ if(array_length(minion_arr) > 1)
 	if(mouse_wheel_down()) minCycle(1);
 	if(mouse_wheel_up()) minCycle(-1);
 }
+if(iFrames>0) iFrames--;
 
 if(inp_move && (skeleton_animation_get()="default" || skeleton_animation_get()="move")) walkSet();
 progress = clamp(y/room_height,0,1)
 if(y<-128) {
 	
+	iFrames = 1;
 	win = true;
 	bark = soundRand(sndWin);
 }

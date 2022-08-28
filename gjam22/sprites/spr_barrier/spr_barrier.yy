@@ -9,13 +9,13 @@
   "swfPrecision": 2.525,
   "bbox_left": 0,
   "bbox_right": 127,
-  "bbox_top": 79,
-  "bbox_bottom": 115,
+  "bbox_top": 46,
+  "bbox_bottom": 82,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 128,
-  "height": 128,
+  "height": 100,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e83f68a4-d502-42c2-95d7-9de50160fe0b","path":"sprites/spr_barrier/spr_barrier.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e83f68a4-d502-42c2-95d7-9de50160fe0b","path":"sprites/spr_barrier/spr_barrier.yy",},"LayerId":{"name":"4d040a59-4d59-4a9c-bf76-cf8b28f2a1c4","path":"sprites/spr_barrier/spr_barrier.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_barrier","path":"sprites/spr_barrier/spr_barrier.yy",},"resourceVersion":"1.0","name":"e83f68a4-d502-42c2-95d7-9de50160fe0b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c63653e9-9bd6-4cbc-86e1-dd0dd5545b79","path":"sprites/spr_barrier/spr_barrier.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c63653e9-9bd6-4cbc-86e1-dd0dd5545b79","path":"sprites/spr_barrier/spr_barrier.yy",},"LayerId":{"name":"0130e601-8fdb-472f-87d5-923b2673b395","path":"sprites/spr_barrier/spr_barrier.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_barrier","path":"sprites/spr_barrier/spr_barrier.yy",},"resourceVersion":"1.0","name":"c63653e9-9bd6-4cbc-86e1-dd0dd5545b79","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_barrier","path":"sprites/spr_barrier/spr_barrier.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c2a86c50-d862-4b9d-97b8-65f3150c1724","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e83f68a4-d502-42c2-95d7-9de50160fe0b","path":"sprites/spr_barrier/spr_barrier.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d9fca7a4-e9a2-4796-aa6a-89e905eebe08","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c63653e9-9bd6-4cbc-86e1-dd0dd5545b79","path":"sprites/spr_barrier/spr_barrier.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -55,7 +55,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 64,
-    "yorigin": 97,
+    "yorigin": 68,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_barrier","path":"sprites/spr_barrier/spr_barrier.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4d040a59-4d59-4a9c-bf76-cf8b28f2a1c4","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0130e601-8fdb-472f-87d5-923b2673b395","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": {
     "left": 0,

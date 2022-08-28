@@ -20,7 +20,6 @@ if(valFood>0) {
 if(valHealth>0) {
 	
 	soundRand(sndHealth);
-	obj_player.food+=valFood;
-	
-	with(obj_player) foodCalc();
+	obj_player.hp+=valHealth;
+	with(obj_player) if(hp>max_hp) hp = max_hp;
 }

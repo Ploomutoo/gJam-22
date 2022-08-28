@@ -57,6 +57,7 @@ function foodCalc()
 //counters and tracking
 bark = 0
 progress = 0;
+iFrames = 100;
 
 //spawning minions
 repeat(minion_slots)

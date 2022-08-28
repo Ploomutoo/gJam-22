@@ -1,5 +1,11 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+function pushAway(object) {
+	
+	var dir = point_direction(x,y,object.x,object.y);
+	with(object) motion_add(dir,1)
+}
+
 function tile_place_meeting(object, layer, xx, yy)
 {
 	//finding tilemap
