@@ -187,4 +187,7 @@ if(anim_to = "") {
 } else skelSet(anim_to);
 #endregion
 
+//setting aim
+inp_aim = inp_dir;
+
 event_inherited();

@@ -11,5 +11,8 @@ if(inp_move)
 	inp_dir += wiggle_val;
 }
 
+//setting aim
+inp_aim = inp_dir;
+
 event_inherited();
 
