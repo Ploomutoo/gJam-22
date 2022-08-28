@@ -14,7 +14,7 @@ if(obj_player.y <= room_height-wave_num*wave_interval)
 			var spawn_dir = 360/count*i;
 			var spawn_x = lengthdir_x(spawn_dist, spawn_dir) + oCamera.x;
 			var spawn_y = lengthdir_y(spawn_dist, spawn_dir) + oCamera.y;
-			instance_create_layer(spawn_x, spawn_y, layer, obj_enemy_slime);
+			instance_create_layer(spawn_x, spawn_y, layer, obj_enemy_biter);
 		}
 		break;
 		
@@ -27,7 +27,7 @@ if(obj_player.y <= room_height-wave_num*wave_interval)
 		{
 			var spawn_x = lengthdir_x(spawn_dist, spawn_dir) + oCamera.x + random_range(-32, 32);
 			var spawn_y = lengthdir_y(spawn_dist, spawn_dir) + oCamera.y + random_range(-32, 32);
-			instance_create_layer(spawn_x, spawn_y, layer, obj_enemy_slime);
+			instance_create_layer(spawn_x, spawn_y, layer, obj_enemy_biter);
 		}
 		break;
 		
@@ -40,7 +40,7 @@ if(obj_player.y <= room_height-wave_num*wave_interval)
 		{
 			var spawn_x = lengthdir_x(spawn_dist, spawn_dir+i%2*180) + oCamera.x + random_range(-32, 32);
 			var spawn_y = lengthdir_y(spawn_dist, spawn_dir+i%2*180) + oCamera.y + random_range(-32, 32);
-			instance_create_layer(spawn_x, spawn_y, layer, obj_enemy_slime);
+			instance_create_layer(spawn_x, spawn_y, layer, obj_enemy_biter);
 		}
 		break;
 	}
