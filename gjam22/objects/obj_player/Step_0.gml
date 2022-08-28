@@ -72,6 +72,13 @@ if(old_z > 0 && z <= 0)
 //deploy
 if(inp_prim && array_length(minion_arr) > 0)
 {	
+	with(obj_ui) {
+		drawCirc = 30;
+		dcx = mlx;
+		dcy = mly;
+		dcr = 16;
+	}
+	
 	audio_stop_sound(bark);
 	bark = audio_play_sound(choose(sndKing1,sndKing2),0,0);
 	image_speed = 1;
