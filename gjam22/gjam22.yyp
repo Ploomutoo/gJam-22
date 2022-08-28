@@ -172,6 +172,7 @@
     {"id":{"name":"scribble_font_add","path":"scripts/scribble_font_add/scribble_font_add.yy",},"order":0,},
     {"id":{"name":"__scribble_gen_5_finalize_bidi","path":"scripts/__scribble_gen_5_finalize_bidi/__scribble_gen_5_finalize_bidi.yy",},"order":5,},
     {"id":{"name":"scribble_flush_everything","path":"scripts/scribble_flush_everything/scribble_flush_everything.yy",},"order":3,},
+    {"id":{"name":"spr_cursor","path":"sprites/spr_cursor/spr_cursor.yy",},"order":29,},
     {"id":{"name":"spr_defend","path":"sprites/spr_defend/spr_defend.yy",},"order":8,},
     {"id":{"name":"oIntro","path":"objects/oIntro/oIntro.yy",},"order":4,},
     {"id":{"name":"mus4","path":"sounds/mus4/mus4.yy",},"order":1,},
