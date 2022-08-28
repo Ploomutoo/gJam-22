@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.75,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "talkGremlinNew.wav",
-  "duration": 0.059093,
+  "soundFile": "sndBiterHerald.mp3",
+  "duration": 1.464,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "talkGremlinNew",
+  "name": "sndBiterHerald",
   "tags": [],
   "resourceType": "GMSound",
 }

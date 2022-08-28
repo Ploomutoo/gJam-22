@@ -1,6 +1,6 @@
 if(obj_player.y <= room_height-wave_num*wave_interval)
 {
-	show_debug_message("new wave");
+	soundRand(sndBiterHerald);
 	wave_num++;
 	var wave_formation = irandom(2);
 	switch wave_formation
