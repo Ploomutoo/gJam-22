@@ -167,6 +167,7 @@
     {"id":{"name":"scribble_is_text_element","path":"scripts/scribble_is_text_element/scribble_is_text_element.yy",},"order":4,},
     {"id":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},"order":2,},
     {"id":{"name":"__scribble_gen_9_write_vbuffs","path":"scripts/__scribble_gen_9_write_vbuffs/__scribble_gen_9_write_vbuffs.yy",},"order":9,},
+    {"id":{"name":"sndBiterHerald","path":"sounds/sndBiterHerald/sndBiterHerald.yy",},"order":23,},
     {"id":{"name":"sndCombat","path":"sounds/sndCombat/sndCombat.yy",},"order":1,},
     {"id":{"name":"scribble_font_add","path":"scripts/scribble_font_add/scribble_font_add.yy",},"order":0,},
     {"id":{"name":"__scribble_gen_5_finalize_bidi","path":"scripts/__scribble_gen_5_finalize_bidi/__scribble_gen_5_finalize_bidi.yy",},"order":5,},
