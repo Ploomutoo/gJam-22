@@ -13,5 +13,6 @@ if(pageOn<array_length(page)-1) {
 	exit;
 }
 
+audio_stop_sound(music);
 keyboard_clear(vk_space);
 room_goto(rm_game);

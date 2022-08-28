@@ -9,6 +9,7 @@ busy_arr = [];
 minion_selected = 0;
 
 old_z = z;
+music = 0;
 
 skeleton_animation_set("default");
 skeleton_skin_set("weight-1");

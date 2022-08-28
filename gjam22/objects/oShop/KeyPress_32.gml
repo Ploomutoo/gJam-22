@@ -1,4 +1,6 @@
+with(oShopOption) instance_destroy();
+
 instance_activate_all();
-audio_stop_sound(bgm);
+soundRand(sndShop);
 
 room_goto(rm_game);

@@ -162,5 +162,6 @@ if(y<-128) {
 	
 	iFrames = 1;
 	win = true;
+	audio_stop_sound(music);
 	bark = soundRand(sndWin);
 }

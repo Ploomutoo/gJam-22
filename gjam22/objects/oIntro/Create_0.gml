@@ -1,3 +1,5 @@
+music = audio_play_sound(mus5,0,1)
+
 drawX = 1408/2
 drawY = 720/2
 
