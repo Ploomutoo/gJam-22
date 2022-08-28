@@ -1,6 +1,7 @@
 Soundtrack by Studio Meow Meow
 
 	Title Track 5
+	Death Track 35
 	Level Tracks 4 18 19 33 67 71
 	Store Tracks 42 46 52 58 96
 	

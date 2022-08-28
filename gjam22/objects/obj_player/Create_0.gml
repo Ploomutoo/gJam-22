@@ -41,7 +41,7 @@ function foodCalc()
 		level++;
 		minion_slots++;
 		soundRand(sndHealth);
-		if(level>2 && skeleton_skin_get()="weight-1") {
+		if(level>4 && skeleton_skin_get()="weight-1") {
 			
 			textPopup(x,y-128,"LARD UP!");
 			skeleton_skin_set("weight-2");

@@ -1,5 +1,3 @@
-if(oShop.minions>=oShop.minionCap) exit;
-
 var obj = oShop.playerObj;
 
 instance_activate_object(obj);

@@ -1,3 +1,5 @@
+if(oShop.minions>=oShop.minionCap) exit;
+
 if(oShop.coins>=cost) {
 	
 	oShop.coins-=cost;
