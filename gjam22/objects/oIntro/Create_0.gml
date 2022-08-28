@@ -1,4 +1,5 @@
 music = audio_play_sound(mus5,0,1)
+window_set_caption("Blompo's PalanQuest")
 
 drawX = 1408/2
 drawY = 720/2
@@ -22,10 +23,10 @@ page[0] = "[scale,1.5][fa_center][fa_middle][pulse]"
 +"It seems that you will have to do both along your trip[delay,100]\n"
 +"[delay,500]\n"
 +"Without delay, you gather your [c_yellow]servants[/c] and [wave]ooze[/wave] onto your trusty palanquin[delay,100]\n"
-+"[spr_ui_crown,1][c_purple]Nightfall[/c] gnaws at your heels as you rocket out of the palace![delay,100]\n"
++"[spr_ui_crown,1][c_fuchsia]Nightfall[/c] gnaws at your heels as you rocket out of the palace![delay,100]\n"
 +"[shake]There is no time to lose![/shake]";
 page[1] = "[scale,1.5][fa_center][fa_middle][pulse]"
-+"Travel northwards before [spr_ui_crown,1][c_purple]Nightfall[/c][delay,100]\n"
++"Travel northwards before [spr_ui_crown,1][c_fuchsia]Nightfall[/c][delay,100]\n"
 +"Fend off bandits and gather resources with your [spr_minion,1][c_yellow]Servants[/c][delay,100]\n"
 +"But [shake]beware![/shake] Your servants cannot haul your [spr_ui_crown,0][c_yellow]Fat Ass[/c] and do tasks at the same time[delay,100]\n"
 +"[delay,500]\n"
