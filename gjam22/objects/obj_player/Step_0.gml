@@ -171,4 +171,16 @@ if(y<-128) {
 	win = true;
 	audio_stop_sound(music);
 	bark = soundRand(sndWin);
+	
+	with(obj_minion) if(item_carry!=noone){
+		with(item_carry) {
+			with(realObj) {
+				
+				event_user(0);
+				instance_destroy();
+			}
+			instance_destroy();
+		}
+		item_carry = noone;
+	}
 }
