@@ -72,9 +72,17 @@ function addMinion(object) {
 	return(inst);
 }
 
+ini_open("unitMemory");
+var memUnit = ini_read_real("unit","unit",obj_minion_normal)
+ini_close();
+
 repeat(minion_slots)
 {	
-	addMinion(obj_minion_bonehead);
+	if(memUnit!=-1) {
+		addMinion(memUnit);
+		memUnit = -1;
+	} else addMinion(obj_minion_normal);
+	
 }
 
 //sorting minion array

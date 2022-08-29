@@ -1,5 +1,5 @@
 inp_dir = point_direction(x,y,target.x,target.y)
-if(array_length(engaged)<1) inp_move = true;
+if(array_length(engaged)<1 || barge) inp_move = true;
 
 if(z=0) dspeed=2;
 

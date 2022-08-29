@@ -78,17 +78,26 @@ switch state
 	break;
 	
 	case st.combat://--------------------------
-		
-		if(!instance_exists(target_obj)) {
-			
-			recallFunc();
-			image_xscale = 1;
-			image_speed = 1;
-			target_obj = noone;
-			break;
-		}
 	
 		anim_to = "attackw";
+		if(!instance_exists(target_obj)) {
+			if(!combat_disable) {
+				recallFunc();
+				image_xscale = 1;
+				image_speed = 1;
+				target_obj = noone;
+			}
+			break;
+			
+		} else if(distance_to_object(target_obj)>target_buffer*2+target_obj.collision_offset) {
+			if(!combat_disable) {
+				state = st.go;
+				anim_to ="";
+				animDir = -1;
+				image_xscale = 1;
+			}
+			break;
+		}
 		image_speed = combat_speed;
 		if(target_obj.x > x) image_xscale = -1;
 		else image_xscale = 1;

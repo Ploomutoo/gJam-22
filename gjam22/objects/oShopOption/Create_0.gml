@@ -1,6 +1,6 @@
 var skin = "normal";
 cost = 5
-switch(irandom(3)){
+switch(irandom(4)){
 	case 0:
 	saleObj = obj_minion_normal;
 	skin = "normal";
@@ -8,7 +8,7 @@ switch(irandom(3)){
 	case 1:
 	saleObj = obj_minion_bonehead;
 	skin = "bonehead";
-	cost = 7;
+	cost = 8;
 	break;
 	case 2:
 	saleObj = obj_minion_bun;
@@ -18,6 +18,11 @@ switch(irandom(3)){
 	case 3:
 	saleObj = obj_minion_crusadile;
 	skin = "crusadile";
+	cost = 10;
+	break;
+	case 4:
+	saleObj = obj_minion_orc;
+	skin = "orc";
 	cost = 10;
 	break;
 }
