@@ -20,16 +20,16 @@ calc_difficulty = function(_wave)
 //2 is cost
 enemyPool = [
 [obj_enemy_biter,10,1],
-[obj_enemy_barger,3,2]
+[obj_enemy_barger,3,3]
 ];
 	
 epDepth = 0;
 for(var i = array_length(enemyPool)-1; i>=0; i--) {	
 	epDepth+=enemyPool[i,1];
 }
-show_debug_message("pool "+string(epDepth))
+//show_debug_message("pool "+string(epDepth))
 
-function poolDraw() {
+/*function poolDraw() {
 	
 	var j = 0;
 	var spawn_obj = irandom(epDepth);
@@ -41,4 +41,4 @@ function poolDraw() {
 	spawn_obj = enemyPool[j,0];			
 	instance_create_layer(spawn_x, spawn_y, layer, spawn_obj);
 	i-=enemyPool[j,2];
-}
+}*/

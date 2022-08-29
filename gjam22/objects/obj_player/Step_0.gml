@@ -142,8 +142,9 @@ else if(inp_sec)
 		if(target = noone || point_distance(mlx,mly,target.x,target.y) > recall_radius) continue;
 
 		if(target.state != st.carry && target.state != st.recall) with(target) {
-		
-			if(target_obj != noone && target_obj.object_index = obj_placeholder) {
+			
+			
+			if(instance_exists(target_obj) && target_obj.object_index = obj_placeholder) {
 			
 				instance_activate_object(target_obj.realObj);
 				instance_destroy(target_obj);

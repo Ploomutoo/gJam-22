@@ -1,6 +1,4 @@
-if(oShop.minions>=oShop.minionCap) exit;
-
-if(oShop.coins>=cost) {
+if(oShop.coins>=cost && oShop.minions<oShop.minionCap) {
 	
 	oShop.coins-=cost;
 	oShop.minions++;
@@ -15,4 +13,7 @@ if(oShop.coins>=cost) {
 	}
 	instance_deactivate_object(obj);
 	instance_destroy();
+} else {
+	
+	soundRand(sndUiClick);
 }

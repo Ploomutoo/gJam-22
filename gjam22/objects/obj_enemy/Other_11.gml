@@ -7,7 +7,7 @@ function fDrop()
 	var drop = choose(obj_p_food, obj_p_coins);
 	
 	var hpChance = (1-obj_player.hp/obj_player.max_hp)/2
-	show_debug_message("healthchance is "+string(hpChance));
+	//show_debug_message("healthchance is "+string(hpChance));
 	
 	if(hpChance>random(1)) drop = obj_p_health;
 	
