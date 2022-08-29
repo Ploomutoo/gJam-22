@@ -33,8 +33,8 @@
     {"propertyId":{"name":"loot","path":"objects/obj_enemy/obj_enemy.yy",},"objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "game_objects",
-    "path": "folders/Objects/game_objects.yy",
+    "name": "enemies and obstacles",
+    "path": "folders/Objects/game_objects/enemies and obstacles.yy",
   },
   "resourceVersion": "1.0",
   "name": "oBumpkinBush",

@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "game_objects",
-    "path": "folders/Objects/game_objects.yy",
+    "name": "enemies and obstacles",
+    "path": "folders/Objects/game_objects/enemies and obstacles.yy",
   },
   "resourceVersion": "1.0",
   "name": "oRock",

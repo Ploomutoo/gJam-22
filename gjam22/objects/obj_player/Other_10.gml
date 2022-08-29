@@ -17,5 +17,6 @@ if(hp>0) {
 		instance_destroy(busy_arr[i]);
 	}
 	audio_stop_sound(music);
+	instance_destroy(obj_game);
 	instance_destroy();
 }

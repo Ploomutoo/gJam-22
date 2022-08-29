@@ -47,6 +47,7 @@ function recallFunc() {
 		}
 	}
 	animDir = -1;
+	image_speed = 1;
 	state = st.recall;
 }
 #endregion

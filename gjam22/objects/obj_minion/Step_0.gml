@@ -78,7 +78,7 @@ switch state
 	break;
 	
 	case st.combat://--------------------------
-	
+		
 		if(!instance_exists(target_obj)) {
 			
 			recallFunc();
@@ -89,6 +89,7 @@ switch state
 		}
 	
 		anim_to = "attackw";
+		image_speed = combat_speed;
 		if(target_obj.x > x) image_xscale = -1;
 		else image_xscale = 1;
 	

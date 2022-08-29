@@ -32,8 +32,8 @@
     {"propertyId":{"name":"deathSound","path":"objects/obj_enemy/obj_enemy.yy",},"objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"value":"sndBiterDie","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "targets",
-    "path": "folders/Objects/game_objects/actors/targets.yy",
+    "name": "enemies and obstacles",
+    "path": "folders/Objects/game_objects/enemies and obstacles.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_enemy_biter",

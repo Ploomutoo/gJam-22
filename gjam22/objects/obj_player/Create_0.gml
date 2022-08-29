@@ -86,3 +86,5 @@ function minion_sort (_elm1, _elm2)
     return sort_type*100 + sort_deployed*10 + sort_id;
 }
 array_sort(minion_arr,minion_sort);
+
+with(instance_nearest(x,y,oRock)) instance_destroy();

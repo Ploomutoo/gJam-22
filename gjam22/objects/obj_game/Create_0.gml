@@ -1,7 +1,4 @@
 randomize();
-//cursor
-cursor_sprite = spr_cursor;
-window_set_cursor(cr_none);
 
 //waves
 game_timer = 0;
@@ -10,7 +7,7 @@ wave_num = 0;
 wave_offset = 0;
 
 start_diff = 1;
-diff_ramp = 0.25;
+diff_ramp = 0.2;
 
 calc_difficulty = function(_wave)
 {
