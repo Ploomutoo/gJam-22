@@ -25,12 +25,15 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":59,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
-  "properties": [],
+  "properties": [
+    {"varType":0,"value":"15","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"push_force","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"200","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"push_radius","tags":[],"resourceType":"GMObjectProperty",},
+  ],
   "overriddenProperties": [
-    {"propertyId":{"name":"max_hp","path":"objects/obj_actor/obj_actor.yy",},"objectId":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"value":"10","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"move_force","path":"objects/obj_actor/obj_actor.yy",},"objectId":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"value":"0.75","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"combat_damage","path":"objects/obj_minion/obj_minion.yy",},"objectId":{"name":"obj_minion","path":"objects/obj_minion/obj_minion.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"combat_speed","path":"objects/obj_minion/obj_minion.yy",},"objectId":{"name":"obj_minion","path":"objects/obj_minion/obj_minion.yy",},"value":"0.75","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "actors",

@@ -74,7 +74,7 @@ function addMinion(object) {
 
 repeat(minion_slots)
 {	
-	addMinion(obj_minion_normal);
+	addMinion(obj_minion_bonehead);
 }
 
 //sorting minion array

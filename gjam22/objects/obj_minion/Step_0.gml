@@ -121,7 +121,7 @@ switch state
 		
 				array_delete(busy_arr,array_find_index(busy_arr,other.id),1);
 				array_push(minion_arr,other.id);
-				array_sort(minion_arr,minion_sort);
+				//array_sort(minion_arr,minion_sort);
 			}
 		}
 	break;
@@ -147,6 +147,20 @@ switch state
 		}
 		
 	break;
+}
+#endregion
+
+#region safeguard
+if(instance_exists(oCamera))
+{
+	var cam_x1 = oCamera.x - oCamera.camWidth/2;
+	var cam_y1 = oCamera.y - oCamera.camHeight/2;
+	var cam_x2 = oCamera.x + oCamera.camWidth/2;
+	var cam_y2 = oCamera.y + oCamera.camHeight/2;;
+	if(collision_rectangle(cam_x1, cam_y1, cam_x2, cam_y2, id, false, false) = noone && (state = st.idle || state = st.go))
+	{
+		state = st.recall;
+	}
 }
 #endregion
 
