@@ -1,3 +1,5 @@
+mask_index = spr_shopBox;
+
 var skin = "normal";
 cost = 5
 switch(irandom(4)){
@@ -38,5 +40,3 @@ skeleton_animation_set(animList[|irandom(ds_list_size(animList)-1)]);
 ds_list_destroy(animList);
 
 txt = scribble("[fa_center]BUY - "+string(cost)+"[spr_item,1]")
-hbx = sprite_width/2;
-hby = sprite_height/2;

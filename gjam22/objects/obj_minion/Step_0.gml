@@ -168,7 +168,7 @@ if(instance_exists(oCamera))
 	var cam_y2 = oCamera.y + oCamera.camHeight/2;;
 	if(collision_rectangle(cam_x1, cam_y1, cam_x2, cam_y2, id, false, false) = noone && (state = st.idle || state = st.go))
 	{
-		state = st.recall;
+		recallFunc();
 	}
 }
 #endregion
