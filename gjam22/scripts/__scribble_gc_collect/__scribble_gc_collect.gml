@@ -165,7 +165,7 @@ function __scribble_gc_add_vbuff(_struct, _vbuff)
 
 function __scribble_gc_remove_vbuff(_vbuff)
 {
-    var _index = __scribble_array_find_index(global.__scribble_gc_vbuff_ids, _vbuff);
+    var _index = __scribble_arrFindIndex(global.__scribble_gc_vbuff_ids, _vbuff);
     if (_index >= 0)
     {
         if (__SCRIBBLE_VERBOSE_GC) __scribble_trace("Manually removing vertex buffer ", _vbuff, " from tracking");

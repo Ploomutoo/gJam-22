@@ -11,7 +11,9 @@ function minion_mount_pos(minion_id)
 	}
 	
 	//find minion index
-	var minion_num = array_find_index(minion_id.owner.minion_arr, minion_id);
+	//show_debug_message("gonna function\n"+string(minion_id.owner.minion_arr)+", "+string(minion_id))
+	
+	var minion_num = arrFindIndex(minion_id.owner.minion_arr, minion_id);
 	if(minion_num = -1)
 	{
 		return -1;

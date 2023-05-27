@@ -397,7 +397,7 @@ function __scribble_random()
     return global.__scribble_lcg / 2147483648;
 }
 
-function __scribble_array_find_index(_array, _value)
+function __scribble_arrFindIndex(_array, _value)
 {
     var _i = 0;
     repeat(array_length(_array))

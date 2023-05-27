@@ -31,11 +31,12 @@ function approach(_start, _end, _shift)
 	}
 }
 
-function array_find_index(id, val)
+function arrFindIndex(argArr, argVal)
 {
-	for(var i = 0; i < array_length(id); i++)
+	//show_debug_message("running function")
+	for(var i = 0; i < array_length(argArr); i++)
 	{
-		if(id[i] = val)
+		if(argArr[i] = argVal)
 		{
 			return i;
 		}

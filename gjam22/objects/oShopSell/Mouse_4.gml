@@ -12,13 +12,13 @@ soundRand(sndCoin);
 if(!instance_exists(linkedObj)) show_debug_message("no linked object");
 with(obj) {
 	
-	var i = array_find_index(minion_arr,other.linkedObj);
+	var i = arrFindIndex(minion_arr,other.linkedObj);
 	if(i>-1) {
 		
 		array_delete(minion_arr,i,1);
 	} else {
 		
-		i = array_find_index(busy_arr,other.linkedObj);
+		i = arrFindIndex(busy_arr,other.linkedObj);
 		array_delete(busy_arr,i,1);
 	}
 }

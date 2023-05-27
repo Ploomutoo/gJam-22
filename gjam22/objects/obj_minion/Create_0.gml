@@ -42,7 +42,7 @@ function recallFunc() {
 	if(instance_exists(target_obj) && object_get_parent(target_obj.object_index)=obj_enemy) {
 		with(target_obj) {
 			
-			var i = array_find_index(engaged,other.id);
+			var i = arrFindIndex(engaged,other.id);
 			if(i>-1) array_delete(engaged,i,1);
 		}
 	}

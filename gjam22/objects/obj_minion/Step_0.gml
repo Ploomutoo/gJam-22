@@ -128,7 +128,7 @@ switch state
 		
 			with(obj_player) {
 		
-				array_delete(busy_arr,array_find_index(busy_arr,other.id),1);
+				array_delete(busy_arr,arrFindIndex(busy_arr,other.id),1);
 				array_push(minion_arr,other.id);
 				//array_sort(minion_arr,minion_sort);
 			}
