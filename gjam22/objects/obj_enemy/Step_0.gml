@@ -7,8 +7,8 @@ if(z=0) dspeed=2;
 wiggle_timer += wiggle_speed;
 if(inp_move)
 {	
-	//var wiggle_val = smooth_noise_2d(wiggle_amt*-0.5, wiggle_amt*0.5, wiggle_timer, 0, 1, id);
-	var wiggle_val = random(10)
+	var wiggle_val = smooth_noise_2d(wiggle_amt*-0.5, wiggle_amt*0.5, wiggle_timer, 0, 1, real(id));
+	//var wiggle_val = random(10)
 	inp_dir += wiggle_val;
 }
 

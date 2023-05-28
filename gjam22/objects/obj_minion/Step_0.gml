@@ -177,7 +177,7 @@ if(instance_exists(oCamera))
 wiggle_timer += wiggle_speed;
 if(inp_move)
 {
-	var wiggle_val = smooth_noise_2d(wiggle_amt*-0.5, wiggle_amt*0.5, wiggle_timer, 0, 1, id);
+	var wiggle_val = smooth_noise_2d(wiggle_amt*-0.5, wiggle_amt*0.5, wiggle_timer, 0, 1, real(id));
 	inp_dir += wiggle_val;
 }
 

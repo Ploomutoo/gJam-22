@@ -9,8 +9,8 @@ function squirrel3(position, seed)
 	
 	var cap = 2147483647;
 	
-	var output = position+0.0;
-	output = output*prime_1;
+	var output = position;
+	output *= prime_1;
 	output += seed;
 	output = output % cap; //enforce cap
 	output ^= (output >> 9);
