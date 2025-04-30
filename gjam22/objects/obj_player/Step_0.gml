@@ -53,6 +53,8 @@ if(inp_dash && z <= 0)
 	}
 	
 	//playing sound
+	image_speed = 1;
+	//skeleton_animation_set("throw");
 	soundRand(sndKingDash);
 }
 
